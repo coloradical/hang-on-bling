@@ -35,4 +35,5 @@
     {squarespace-footers}
 
   </body>
+  <script>console.log({@|json})</script>
 </html>

@@ -90,6 +90,7 @@ body.homepage {
   background-image: url("/assets/hangon_bg.png");
   }
 
+// BLOCK STYLING 
 
 
 /* Blog list
@@ -102,10 +103,44 @@ body.collection-type-blog.view-list {
   }
 }
 
+// SHOP STYLING 
+
+
+#productList .product {
+  cursor: pointer;
+  float: left;
+  margin: 0;
+  position: relative;
+  width: 22%;
+  left: 0.5%;
+  min-width: 100px;
+  
+}
+
+#productList {
+  width: 95%;
+  border: 15px solid pink;
+  margin: 0;
+  display: flex; 
+  flex-wrap: wrap;
+  
+}
+
+.product {
+  border: 2px solid green; 
+  padding: 25px 50px;
+  width: 100px;
+  flex-grow: 1;
+  min-height: 350px;
+  background: white;
+}
 
 
 /* Break grid and stack blocks on small screens
 ***************************************************/
+
+
+
 
 @media screen and (max-width: 640px) {
   @import 'sqs-grid-breaker';
