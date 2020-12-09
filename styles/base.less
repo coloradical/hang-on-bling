@@ -108,7 +108,7 @@ body.homepage {
 .window-bar {
   width: 100%;
   top: 0; 
-  padding: 5px 10px; 
+  // padding: 0px 10px; 
   margin: 0; 
   color: white;
   display: inline-block;
@@ -117,6 +117,10 @@ body.homepage {
 .window-bar img {margin: -10px 0px 0px 0px;}
 .window-bar a {float: right;}
 .window-bar p {float: left; padding: 5px 5px 5px 5px; margin: 0;}
+
+#jonas_caption {
+  position: absolute; margin: 30% 0 0 15%; max-width: 400px;
+}
 
 ///////////////////////////////////// FEATURED BLING SECTION
 div#yui_3_17_2_1_1607488832489_327 {
@@ -201,6 +205,33 @@ body.collection-type-blog.view-list {
   font-size: 18px !important;
 }
 
+// BLING SHOP 
+.bling_shop_header { height: 35px; color: white; padding: 5px;}
+
+.filter-menu-wrapper {
+  width: 55%; 
+  max-width: 875px;
+  position: absolute;
+  margin-right: 5vw;
+  margin-top: 25px;
+  z-index: 10;
+}
+
+.filter-spacer {width: 65%; float: left;}
+.filter-menu {width: 35%; float: right; padding: 0px 10px; }
+.filter-menu li a {font-size: 16px; padding: 2px; }
+.filter-menu li {list-style-type: none; margin: 0; border: 1px;}
+.filter-menu ul {padding-inline-start: 0%; text-align: right;}
+.filter-menu a {color: black;}
+.filter-menu a:hover {text-decoration: underline; }
+.reviews {
+  width: 100%; 
+  // height: 300px;
+  // background: #b9c8f0;
+  margin-bottom: 10%;
+}
+
+.filter-menu-hover a:hover {display: block;}
 
 
 /* Break grid and stack blocks on small screens
@@ -236,6 +267,7 @@ body.collection-type-blog.view-list {
 
 .lavender-border {border: solid 3px #e03593;}
 .lavender-inset-border {
+  color: white;
   box-shadow: inset -2px -2px 0px #6A61C9, inset 2px 2px 0px #FFFFFF;
 }
 
