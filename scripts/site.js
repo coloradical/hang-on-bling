@@ -24,3 +24,12 @@
   window.addEventListener('resize', loadAllImages);
 
 }());
+
+var productButtons = document.getElementsByClassName('product-price');
+var productPrices = document.getElementsByClassName('sqs-money-native');
+
+for(i=0; i<productButtons.length; i++){
+  productButtons[i].classList.add("magenta-btn");
+  productPrices[i].insertAdjacentHTML('beforebegin', '<span>SHOP-</span>');
+}
+
