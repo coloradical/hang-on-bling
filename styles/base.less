@@ -8,7 +8,7 @@ body {
   font-size: 100%;
   font-weight: normal;
   box-sizing: border-box; 
-  height: 100vh; 
+  height: 100%; 
   width: 100vw;
   border: 3px solid gold;
   background-image: url("/assets/hangon_bg.png");
@@ -17,11 +17,11 @@ body {
 h1 { font-family: Consolas, Roboto Mono, monospace; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 23px; } 
 h2 { font-family: Consolas, monaco, monospace; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 23px; } 
 h3 { font-family: Consolas, monaco, monospace; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 23px; } 
-p { font-family: Consolas, monaco, monospace; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; } 
+p { font-family: Consolas, monaco, monospace; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 200; line-height: 22px; } 
 blockquote { font-family: Consolas, monaco, monospace; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; } 
 pre { font-family: Consolas, monaco, monospace; font-size: 11px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; }
 ul {padding-inline-start: 0px!important;}
-
+a {text-decoration: none; font-size: 18px;}
 
 
 
@@ -73,7 +73,7 @@ ul {padding-inline-start: 0px!important;}
 }
 
 .site-title-heading {display: none;}
-.content-container {margin: 0vh 4vw; border: 3px solid lime; }
+.content-container {margin: 4vw; border: 3px solid lime; }
 
 .site-footer {
   
@@ -92,6 +92,23 @@ body.homepage {
 
 // BLOCK STYLING 
 
+.box {
+  border: 2px solid black;
+  padding: 25px;
+  transform: translate(10px, -10px);
+}
+
+.box-wrapper {
+  border: 2px solid black;
+  z-index: 2;
+}
+
+// FEATURED BLING SECTION
+div#yui_3_17_2_1_1607488832489_327 {
+  background: white !important;
+  max-height: 950px !important;
+  overflow-y: scroll !important;
+}
 
 /* Blog list
 ***************************************************/
@@ -109,7 +126,7 @@ body.collection-type-blog.view-list {
 #productList .product {
   cursor: pointer;
   float: left;
-  margin: 0;
+  
   position: relative;
   width: 22%;
   left: 0.5%;
@@ -118,22 +135,56 @@ body.collection-type-blog.view-list {
 }
 
 #productList {
-  width: 95%;
-  border: 15px solid pink;
+  width: 100%;
+  border: 1px solid pink;
   margin: 0;
   display: flex; 
   flex-wrap: wrap;
   
 }
 
-.product {
-  border: 2px solid green; 
-  padding: 25px 50px;
-  width: 100px;
+.product, .summary-item {
   flex-grow: 1;
-  min-height: 350px;
-  background: white;
+  border: 2px solid #e03593;; 
+  padding: 25px;
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  max-height: 500px;
+  background: #fbe3f3;
+  margin: 25px;
+  
 }
+
+.post-type-store-item:hover {
+  border: 2px inset #b1a9f3;
+  transform: scale(1.05);
+}
+
+.product-title, .summary-title, .summary-title-link{
+  text-decoration: none !important;
+  color: black;
+  font-size: 20px !important;
+  margin: 24px 0px;
+}
+
+.product-price {
+  text-decoration: none;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  padding: 21px;
+  color: white;
+  width: 100%; 
+  text-align: center;
+  
+}
+
+.product-price span {
+  font-size: 18px !important;
+}
+
 
 
 /* Break grid and stack blocks on small screens
@@ -173,15 +224,20 @@ body.collection-type-blog.view-list {
 }
 
 .magenta-btn{
+  display: flex; 
+  align-items: center;
+  justify-content: center;
   background: #FFB4EE;
   border: 1px solid #E03593;
   box-sizing: border-box;
   height: 60px;
+  margin: 10px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: inset -2px -2px 0px #E03593, inset 4px 4px 0px #FFFFFF;
   cursor: url("/assets/bling-pointer.svg"), auto;
+  color: white;
 
   &:hover{
     background: #E03593;
@@ -191,6 +247,8 @@ body.collection-type-blog.view-list {
     color: #FFB4EE;
   }
 }
+
+
 
 .orange-btn {
   background: #Ecc8a3;;
