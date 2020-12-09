@@ -1,97 +1,94 @@
 
-/* CSS pre-processing by {less}. http://lesscss.org/
-***************************************************/
-
-
-
 /* General syles
 ***************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap');
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Consolas', monospace;
   font-size: 100%;
   font-weight: normal;
+  box-sizing: border-box; 
+  height: 100vh; 
+  width: 100vw;
+  border: 3px solid gold;
+  background-image: url("/assets/hangon_bg.png");
 }
+
+h1 { font-family: Consolas, Roboto Mono, monospace; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 23px; } 
+h2 { font-family: Consolas, monaco, monospace; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 23px; } 
+h3 { font-family: Consolas, monaco, monospace; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 23px; } 
+p { font-family: Consolas, monaco, monospace; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; } 
+blockquote { font-family: Consolas, monaco, monospace; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; } 
+pre { font-family: Consolas, monaco, monospace; font-size: 11px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; }
+ul {padding-inline-start: 0px!important;}
+
+
+
 
 .site-container {
-  line-height: 1.6em;
-  color: #777;
-  max-width: 1020px;
-  padding: 6vw;
-
-  h1, h2, h3 {
-    font-weight: normal;
-    line-height: 1.2em;
-  }
-
-  a {
-    color: cornflowerblue;
-
-    &.disabled {
-      color: #ccc;
-    }
-  }
+  border: 2px solid red;
 }
 
-.site-header {
-  margin-bottom: 4vw;
+ .bling-shop .site-container {
+  border: 200px solid red;
 }
 
-.site-navigation { }
+// .site-header {
+  
+//   border: 3px solid teal;
+// }
+
+
+.site-navigation { height: 40px; background: #E03693; display: flex; align-items: center;}
 
 .site-navigation-list {
-  padding: 0;
+  
+  width: 100%;
+
 }
+
+
 
 .site-navigation-item {
   display: inline-block;
-  font-size: 87.5%;
-
-  & + .site-navigation-item {
-    margin-left: 1em;
-  }
+  font-size: 18px;
+  margin: 12px 0px;
+  
 
   a {
-    color: #111;
+    color: white;
     text-decoration: none;
+    font-weight: 400;
+    padding:10px;
 
     &:hover {
-      color: #999;
+      border: 1px solid black;
     }
   }
 
   &.active-link > a {
-    color: #999;
+    text-decoration: underline;
   }
 
 }
 
-.site-title-heading {
-
-  .site-title-link {
-    color: #111;
-    font-weight: 400;
-    text-decoration: none;
-  }
-}
-
-.content-container { }
+.site-title-heading {display: none;}
+.content-container {margin: 0vh 4vw; border: 3px solid lime; }
 
 .site-footer {
-  font-size: 75%;
-  margin-top: 4vw;
-  margin-bottom: 4vw;
+  
+  border: 2px solid orange;
 }
 
-
+.close-btn {color: white; padding: 5px 10px; margin: 5px; background: rgba(255,255,255,0.5); float: right; border: 2px solid white;}
+.close-btn:hover {color: black; border: 2px solid black;}
 
 /* Homepage
 ***************************************************/
 
-body.homepage { }
+body.homepage {
+  background-image: url("/assets/hangon_bg.png");
+  }
 
 
 
@@ -115,3 +112,75 @@ body.collection-type-blog.view-list {
 }
 
 
+.light-lav {background: #e1def4;}
+.lavender {background: #b1a9f3;}
+.magenta {background: #e03593;}
+.light-pink {background: #fbe3f3;}
+.pink {background: #f5b8eb;}
+.dark-pink {background: #c36acd;}
+.light-blue {background: #b9c8f0;}
+.light-orange {background: #f9eee2}
+.orange {background: #Ecc8a3;}
+.white {background: white;}
+
+.magenta-border {border: solid 3px #e03593;}
+.magenta-inset-border {
+  box-shadow: inset -2px -2px 0px #e03593, inset 2px 2px 0px #FFFFFF;
+}
+
+.orange-inset-border {
+  box-shadow: inset -2px -2px 0px orange, inset 2px 2px 0px #FFFFFF;
+}
+
+.lavender-border {border: solid 3px #e03593;}
+.lavender-inset-border {
+  box-shadow: inset -2px -2px 0px #6A61C9, inset 2px 2px 0px #FFFFFF;
+}
+
+.magenta-btn{
+  background: #FFB4EE;
+  border: 1px solid #E03593;
+  box-sizing: border-box;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset -2px -2px 0px #E03593, inset 4px 4px 0px #FFFFFF;
+  cursor: url("/assets/bling-pointer.svg"), auto;
+
+  &:hover{
+    background: #E03593;
+    border: 1px solid #E03593;
+    box-sizing: border-box;
+    box-shadow: inset -2px -2px 0px #FFB4EE, inset 4px 4px 0px #C41B78; 
+    color: #FFB4EE;
+  }
+}
+
+.orange-btn {
+  background: #Ecc8a3;;
+  border: 1px solid orange;
+  box-sizing: border-box;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset -2px -2px 0px orange, inset 4px 4px 0px #FFFFFF;
+  cursor: url("/assets/bling-pointer.svg"), auto;
+
+  &:hover{
+    background: orange;
+    border: 1px solid orange;
+    box-sizing: border-box;
+    box-shadow: inset -2px -2px 0px #Ecc8a3, inset 4px 4px 0px orange; 
+    color: #Ecc8a3;
+  }
+}
+
+
+.styled-button {
+  padding: 10px 50px;
+}
+
+.btn-wrapper {width: 100%; margin: 25px 0px 15px 0px; display: flex; align-items: center; justify-content: center;}
+.black-border{border: 2px solid black;}

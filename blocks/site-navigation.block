@@ -1,4 +1,4 @@
-<nav class="site-navigation">
+<nav class="site-navigation magenta-inset-border">
   <ul class="site-navigation-list">
     {.repeated section items}
 
@@ -8,6 +8,7 @@
         {.section collection}
           <a href="{fullUrl}">{navigationTitle}</a>
         {.end}
+        
 
         <!-- external link -->
         {.section externalLink}
@@ -19,5 +20,7 @@
       </li>
 
     {.end}
+    <a onclick='toggleItem("parent-photo")' class="close-btn">X</a>
+    
   </ul>
 </nav>
