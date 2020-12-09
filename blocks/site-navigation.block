@@ -1,5 +1,5 @@
-<nav class="site-navigation magenta-inset-border">
-  <ul class="site-navigation-list">
+<nav class="site-navigation ">
+  <ul class="site-navigation-list magenta-inset-border magenta">
     {.repeated section items}
 
       <li class="site-navigation-item {.section active} active-link{.end}">

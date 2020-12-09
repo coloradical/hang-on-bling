@@ -15,6 +15,10 @@
         <!-- site navigation -->
         <squarespace:navigation navigationId="siteNav" template="site-navigation" />
       </header>
+      <div class='logo-wrapper'>
+          <a href="home"><img class="logo" src="{website.logoImageUrl}" alt="Hang On Logo"></a>
+          <h1 class="page-title-h1">{squarespace.page-title}</h1>
+      </div>
 
       <!-- cms content injection point -->
       <main class="content-container" role="main" data-content-field="main-content">

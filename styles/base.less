@@ -11,7 +11,10 @@ body {
   height: 100%; 
   width: 100vw;
   border: 3px solid gold;
-  background-image: url("/assets/hangon_bg.png");
+  background: #E03693;
+  background: -webkit-radial-gradient(bottom right, #E03693, #B9C8F0);
+  background: -moz-radial-gradient(bottom right, #E03693, #B9C8F0);
+  background: radial-gradient(to top left, #E03693, #B9C8F0);
 }
 
 h1 { font-family: Consolas, Roboto Mono, monospace; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 23px; } 
@@ -20,18 +23,16 @@ h3 { font-family: Consolas, monaco, monospace; font-size: 18px; font-style: norm
 p { font-family: Consolas, monaco, monospace; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 200; line-height: 22px; } 
 blockquote { font-family: Consolas, monaco, monospace; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; } 
 pre { font-family: Consolas, monaco, monospace; font-size: 11px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; }
-ul {padding-inline-start: 0px!important;}
+ul {padding-inline-start: 10px!important; padding-inline-end: 5px!important; margin-block-start: 0;}
 a {text-decoration: none; font-size: 18px;}
 
-
+main {padding: 5vw 6vw;}
 
 .site-container {
   border: 2px solid red;
 }
 
- .bling-shop .site-container {
-  border: 200px solid red;
-}
+
 
 // .site-header {
   
@@ -39,11 +40,14 @@ a {text-decoration: none; font-size: 18px;}
 // }
 
 
-.site-navigation { height: 40px; background: #E03693; display: flex; align-items: center;}
-
+.site-navigation { height: 50px; width: 100%;  }
+.site-navigation .close-btn {margin-top: -6px;}
 .site-navigation-list {
-  
+  height: 40px;
   width: 100%;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  
 
 }
 
@@ -51,15 +55,12 @@ a {text-decoration: none; font-size: 18px;}
 
 .site-navigation-item {
   display: inline-block;
-  font-size: 18px;
-  margin: 12px 0px;
-  
-
   a {
+    font-size: 20px;
     color: white;
     text-decoration: none;
     font-weight: 400;
-    padding:10px;
+    padding:2.5px 5px;
 
     &:hover {
       border: 1px solid black;
@@ -73,22 +74,36 @@ a {text-decoration: none; font-size: 18px;}
 }
 
 .site-title-heading {display: none;}
-.content-container {margin: 4vw; border: 3px solid lime; }
+.content-container { border: 3px solid lime; }
 
 .site-footer {
-  
   border: 2px solid orange;
 }
 
-.close-btn {color: white; padding: 5px 10px; margin: 5px; background: rgba(255,255,255,0.5); float: right; border: 2px solid white;}
-.close-btn:hover {color: black; border: 2px solid black;}
+.logo-wrapper {width: 100%; text-align: center;
+  }
+  
+  .logo-wrapper img {max-width: 300px; width: 100%; cursor: url("/assets/bling-pointer.svg"), auto; }
+  
+  .page-title-h1 {
+    text-transform: uppercase;
+    width: 100%; 
+    color: white;
+    font-size: 48px;
+  }
 
 /* Homepage
 ***************************************************/
 
 body.homepage {
   background-image: url("/assets/hangon_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   }
+
+.homepage .logo-wrapper{
+  display: none;
+}
 
 // BLOCK STYLING 
 
@@ -101,25 +116,33 @@ body.homepage {
 .box-wrapper {
   border: 2px solid black;
   z-index: 2;
+  margin: 5vw 2.5vw;
 }
 
-.img-box {width: 100%; margin: -7px 0;}
-.window-bar-wrapper {border: 2px solid black; margin-top: 0;}
+.img-box {width: 100%; margin: -6px 0px;}
+.window-bar-wrapper {border: 2px solid black; margin: 5vw 2.5vw;}
 .window-bar {
   width: 100%;
   top: 0; 
-  // padding: 0px 10px; 
-  margin: 0; 
+  height: 35px;
+ 
   color: white;
   display: inline-block;
 }
 
-.window-bar img {margin: -10px 0px 0px 0px;}
+// .window-bar img {margin: -10px 0px 0px 0px;}
 .window-bar a {float: right;}
-.window-bar p {float: left; padding: 5px 5px 5px 5px; margin: 0;}
+.window-bar p {float: left; padding: 5px 5px 5px 5px; margin: 0 0 0 5px;}
+
+.close-btn {padding: 4px 10px;
+   color: white; background: rgba(255,255,255,0.5); float: right; border: 2px solid white;}
+.close-btn:hover {color: black; border: 2px solid black;}
+
+
 
 #jonas_caption {
-  position: absolute; margin: 30% 0 0 15%; max-width: 400px;
+  position: absolute; margin: -20% 5vw 0 30%;
+  // position: absolute; margin: 30% 0 0 15%; max-width: 400px;
 }
 
 ///////////////////////////////////// FEATURED BLING SECTION
@@ -128,6 +151,19 @@ div#yui_3_17_2_1_1607488832489_327 {
   max-height: 950px !important;
   overflow-y: scroll !important;
 }
+
+
+//######################## ABOUT PAGE 
+
+#page-5fd02f0826d54b3c06c9d1a9.site-container {
+  background-image: url("/assets/about-bg-long.jpg")!important;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+ 
+
+
+
 
 /* Blog list
 ***************************************************/
