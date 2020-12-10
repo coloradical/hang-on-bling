@@ -1,7 +1,3 @@
-<head>
-<script src="https://kit.fontawesome.com/2bb76901bd.js" crossorigin="anonymous"></script>
-</head>
-
 <nav class="site-navigation" id="pink-nav-bar">
   <ul class="site-navigation-list magenta-inset-border magenta">
     {.repeated section items}
