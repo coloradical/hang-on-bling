@@ -15,6 +15,9 @@ body {
   background: -webkit-radial-gradient(bottom right, #E03693, #B9C8F0);
   background: -moz-radial-gradient(bottom right, #E03693, #B9C8F0);
   background: radial-gradient(to top left, #E03693, #B9C8F0);
+  overflow-x: hidden; 
+  cursor: url("/assets/bling-cursor.svg"), auto;
+
 }
 
 h1 { font-family: Consolas, Roboto Mono, monospace; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 23px; } 
@@ -24,7 +27,7 @@ p { font-family: Consolas, monaco, monospace; font-size: 16px; font-style: norma
 blockquote { font-family: Consolas, monaco, monospace; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; } 
 pre { font-family: Consolas, monaco, monospace; font-size: 11px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; }
 ul {padding-inline-start: 10px!important; padding-inline-end: 5px!important; margin-block-start: 0;}
-a {text-decoration: none; font-size: 18px;}
+a {text-decoration: none; font-size: 18px; cursor: url("/assets/bling-pointer.svg"), auto;}
 
 main {padding: 5vw 6vw;}
 
@@ -32,7 +35,7 @@ main {padding: 5vw 6vw;}
   border: 2px solid red;
 }
 
-.site-navigation { height: 50px; width: 100%;  }
+.site-navigation { height: 50px; width: 100%; z-index: 300; position: fixed; top: 0; left: 0;  }
 .site-navigation .close-btn {margin-top: -6px;}
 .site-navigation-list {
   height: 40px;
@@ -43,6 +46,9 @@ main {padding: 5vw 6vw;}
 
 }
 
+#mobile-nav {
+  display: none; width: 50vw; height: 100vh; padding: 25px; left: 0; position: absolute; background: purple; top: 35px;
+}
 
 
 .site-navigation-item {
@@ -85,6 +91,8 @@ main {padding: 5vw 6vw;}
     font-size: 48px;
   }
 
+  .fas {font-size: 12px;}
+
 /* Homepage
 ***************************************************/
 
@@ -114,6 +122,10 @@ body.homepage {
   border: 2px solid black;
   z-index: 2;
   margin: 2vw;
+}
+
+.box-wrapper:hover {
+  transform: scale(1.05);
 }
 
 .img-box {width: 100%; margin: -6px 0px -6px 0px;}
@@ -178,6 +190,7 @@ div#yui_3_17_2_1_1607488832489_327 {
   display: none;
 }
 
+
 .featured-product-grid {
   overflow-y: scroll;
   max-height: 950px;
@@ -233,6 +246,7 @@ body.collection-type-blog.view-list {
   margin: 0;
   display: flex; 
   flex-wrap: wrap;
+  justify-content: center;
 
   
 }
@@ -373,6 +387,9 @@ footer { padding: 50px; margin-top: 100px;}
 
 @media screen and (max-width: 640px) {
   @import 'sqs-grid-breaker';
+  .mobile-show {display: block; }
+  .mobile-hide {display: none;}
+  .site-navigation-item {display: none;}
 }
 
 
@@ -457,3 +474,17 @@ footer { padding: 50px; margin-top: 100px;}
 
 .btn-wrapper {width: 100%; margin: 25px 0px 15px 0px; display: flex; align-items: center; justify-content: center;}
 .black-border{border: 2px solid black;}
+
+.scale-up-center{-webkit-animation:scale-up-center .4s cubic-bezier(.39,.575,.565,1.000) both;animation:scale-up-center .4s cubic-bezier(.39,.575,.565,1.000) both}
+@-webkit-keyframes scale-up-center{0%{-webkit-transform:scale(.5);transform:scale(.5)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes scale-up-center{0%{-webkit-transform:scale(.5);transform:scale(.5)}100%{-webkit-transform:scale(1);transform:scale(1)}}
+
+.shrink{animation: shrink 0.25s cubic-bezier(1.000, 0.75, 0.5, 0.25) both;}
+@keyframes shrink {0% {position: fixed; left: 0%;} 100% {position: fixed; left: -100%; margin-left: 90px;}}
+
+.expand{animation: expand 0.25s cubic-bezier(1.000, 0.75, 0.5, 0.25) both;}
+@keyframes expand {0% {position: fixed; left: -100%; margin-left: 90px;} 100% {position: fixed; left: 0%; margin-left: 0px;}}
+
+
+
+.scale-in-ver-top{-webkit-animation:scale-in-ver-top .5s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-ver-top .5s cubic-bezier(.25,.46,.45,.94) both}
+@-webkit-keyframes scale-in-ver-top{0%{-webkit-transform:scaleY(0);transform:scaleY(0);-webkit-transform-origin:100% 0;transform-origin:100% 0;opacity:1}100%{-webkit-transform:scaleY(1);transform:scaleY(1);-webkit-transform-origin:100% 0;transform-origin:100% 0;opacity:1}}@keyframes scale-in-ver-top{0%{-webkit-transform:scaleY(0);transform:scaleY(0);-webkit-transform-origin:100% 0;transform-origin:100% 0;opacity:1}100%{-webkit-transform:scaleY(1);transform:scaleY(1);-webkit-transform-origin:100% 0;transform-origin:100% 0;opacity:1}}

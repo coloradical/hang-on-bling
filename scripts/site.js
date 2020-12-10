@@ -33,3 +33,68 @@ for(i=0; i<productButtons.length; i++){
   productPrices[i].insertAdjacentHTML('beforebegin', '<span>SHOP-</span>');
 }
 
+function toggleNavigation(toggleNumber, shrink){
+  var mobileNavMenu = document.getElementById('mobile-nav');
+  var fullNav = document.getElementById('pink-nav-bar');
+  var fullNavClose = document.getElementById('main-nav-close')
+  var hideLinks = document.getElementsByClassName('site-navigation-item');
+  var expandNavBtn = document.getElementById('expand-close');
+
+  if (toggleNumber === 0 & shrink){
+    expandNavBtn.style.display = 'block';
+    fullNav.style.animation = "shrink 0.25s cubic-bezier(1.000, 0.75, 0.5, 0.25) both";
+    fullNavClose.style.display = "none";
+  } 
+  
+  else if (toggleNumber === 0 && !shrink){
+    expandNavBtn.style.display = 'none';
+    fullNav.style.animation = "expand 0.25s cubic-bezier(1.000, 0.75, 0.5, 0.25) both";
+    fullNavClose.style.display = "block";
+  }
+  
+  else if (toggleNumber === 1 && document.getElementById('mobile-nav').style.display === "none") {
+    console.log('alt');
+    mobileNavMenu.style.display="block";
+  } else {
+    mobileNavMenu.style.display="none";
+  }
+  
+
+}
+
+function filterProducts(productType){
+  var lanyards = document.getElementsByClassName("lanyards");
+  var chains = document.getElementsByClassName("chains");
+  var productGrid = document.getElementById('featured-product-grid');
+
+  console.log(chains);
+
+  if (productType === 1){
+      productGrid.style.animation = "fade-in"
+      for (i=0; i < 8; i++){
+          chains[i].style.display = 'block';
+          lanyards[i].style.display = 'none';
+      }
+      toggleItem("filter-menu-wrapper");
+  } else if (productType === 2){
+      for (i=0; i < 8; i++){
+          lanyards[i].style.display = 'block';
+          chains[i].style.display = 'none';
+      }
+      toggleItem('filter-menu-wrapper');
+  }
+
+}
+
+function toggleItem(elementName){
+  var hideThis = document.getElementById(elementName);
+  if (hideThis.style.display === "block"){
+      hideThis.style.display = "none";
+  
+
+  } else {
+      hideThis.style.display = "block";
+  }
+  
+}
+

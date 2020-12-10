@@ -1,4 +1,8 @@
-<nav class="site-navigation ">
+<head>
+<script src="https://kit.fontawesome.com/2bb76901bd.js" crossorigin="anonymous"></script>
+</head>
+
+<nav class="site-navigation" id="pink-nav-bar">
   <ul class="site-navigation-list magenta-inset-border magenta">
     {.repeated section items}
 
@@ -20,7 +24,22 @@
       </li>
 
     {.end}
-    <a onclick='toggleItem("parent-photo")' class="close-btn">X</a>
-    
+
+        <a id="main-nav-close" onclick='toggleNavigation(0, true)' class="close-btn scale-up-center mobile-hide">X</a>
+        <a id="expand-close" style="display: none" onclick='toggleNavigation(0, false)' class="close-btn scaleup-center mobile-hide"><i class="fas fa-expand-alt"></i></a>
+        <a id="cart-nav" href="/cart" class="close-btn scale-up-center"><i style="font-size: 12px" class="fa">&#xf07a;</i></a>
+        <a id="mobile-nav-close" onclick='toggleNavigation(1)' class="close-btn scale-up-center mobile-show">&#8801</a>
+        
+        <div class="scale-in-ver-top" id="mobile-nav">
+          <ul> 
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/bling-shop">Shop</a></li>
+            <li><a href="/lookbook">Lookbook</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
   </ul>
 </nav>
