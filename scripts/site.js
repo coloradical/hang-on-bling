@@ -36,8 +36,7 @@ for(i=0; i<productButtons.length; i++){
 function toggleNavigation(toggleNumber, shrink){
   var mobileNavMenu = document.getElementById('mobile-nav');
   var fullNav = document.getElementById('pink-nav-bar');
-  var fullNavClose = document.getElementById('main-nav-close')
-  var hideLinks = document.getElementsByClassName('site-navigation-item');
+  var fullNavClose = document.getElementById('main-nav-close');
   var expandNavBtn = document.getElementById('expand-close');
 
   if (toggleNumber === 0 & shrink){
@@ -52,11 +51,12 @@ function toggleNavigation(toggleNumber, shrink){
     fullNavClose.style.display = "block";
   }
   
-  else if (toggleNumber === 1 && document.getElementById('mobile-nav').style.display === "none") {
-    console.log('alt');
+  else if (toggleNumber === 1 && !shrink) {
     mobileNavMenu.style.display="block";
+    document.getElementById('secondary-mobile-close').style.display = "block";
   } else {
     mobileNavMenu.style.display="none";
+    document.getElementById('secondary-mobile-close').style.display = "none";
   }
   
 

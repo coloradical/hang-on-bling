@@ -27,10 +27,13 @@
 
         <a id="main-nav-close" onclick='toggleNavigation(0, true)' class="close-btn scale-up-center mobile-hide">X</a>
         <a id="expand-close" style="display: none" onclick='toggleNavigation(0, false)' class="close-btn scaleup-center mobile-hide"><i class="fas fa-expand-alt"></i></a>
-        <a id="cart-nav" href="/cart" class="close-btn scale-up-center"><i style="font-size: 12px" class="fa">&#xf07a;</i></a>
-        <a id="mobile-nav-close" onclick='toggleNavigation(1)' class="close-btn scale-up-center mobile-show">&#8801</a>
-        
-        <div class="scale-in-ver-top" id="mobile-nav">
+        <a id="cart-nav" href="/cart" class="close-btn scale-up-center"><i class="fa fas">&#xf07a;</i></a>
+        <a id="mobile-nav-close" onclick='toggleNavigation(1, false)' class="close-btn scale-up-center mobile-show">&#8801</a>
+        <div class="mobile-show" id="mobile-nav-title">
+          <a style="float: left;" onclick='toggleNavigation(1, false)'>Hang On</a>
+          <a id="secondary-mobile-close" onclick='toggleNavigation(1, true)'>[X]</a>
+        </div>
+        <div class="scale-in-ver-top pink magenta-inset-border" id="mobile-nav">
           <ul> 
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
