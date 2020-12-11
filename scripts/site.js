@@ -25,10 +25,17 @@
 
 }());
 
+var productButtons = document.getElementsByClassName('product-price');
+var productPrices = document.getElementsByClassName('sqs-money-native');
+
+for(i=0; i<productButtons.length; i++){
+  productButtons[i].classList.add("magenta-btn");
+  productPrices[i].insertAdjacentHTML('beforebegin', '<span>SHOP-</span>');
+}
 
 function toggleNavigation(toggleNumber, shrink){
   var mobileNavMenu = document.getElementById('mobile-nav');
-  var fullNav = document.getElementById('pink-nav-bar');
+  var fullNav = document.getElementById('site-navigation-wrapper');
   var fullNavClose = document.getElementById('main-nav-close');
   var expandNavBtn = document.getElementById('expand-close');
 
@@ -55,7 +62,29 @@ function toggleNavigation(toggleNumber, shrink){
 
 }
 
+function filterProducts(productType){
+  var lanyards = document.getElementsByClassName("lanyards");
+  var chains = document.getElementsByClassName("chains");
+  var productGrid = document.getElementById('featured-product-grid');
 
+  console.log(chains);
+
+  if (productType === 1){
+      productGrid.style.animation = "fade-in"
+      for (i=0; i < 8; i++){
+          chains[i].style.display = 'block';
+          lanyards[i].style.display = 'none';
+      }
+      toggleItem("filter-menu-wrapper");
+  } else if (productType === 2){
+      for (i=0; i < 8; i++){
+          lanyards[i].style.display = 'block';
+          chains[i].style.display = 'none';
+      }
+      toggleItem('filter-menu-wrapper');
+  }
+
+}
 
 function toggleItem(elementName){
   var hideThis = document.getElementById(elementName);

@@ -19,7 +19,6 @@ body {
   box-sizing: border-box; 
   height: 100%; 
   width: 100vw!important;
-  border: 3px solid gold;
   background: #E03693;
   background: -webkit-radial-gradient(bottom right, #E03693, #B9C8F0);
   background: -moz-radial-gradient(bottom right, #E03693, #B9C8F0);
@@ -44,22 +43,17 @@ a:hover {cursor: url("/assets/bling-pointer.svg"), auto;}
 main {padding: 2vw 6vw;}
 
 .site-container {
-  border: 2px solid red;
   
   margin: auto;
 }
 
-.site-navigation { height: 50px; width: 100%; z-index: 300; position: fixed; top: 0; left: 0;  }
+.site-navigation { height: 40px; width: 100%; z-index: 300; position: fixed; top: 0; left: 0;  }
 .site-navigation .close-btn {margin-top: -6px;}
 .site-navigation-list {
-  height: 40px;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 10px 15px;
-  
+  height: 40px; width: 100%; z-index: 300; position: fixed; top: 0; left: 0; box-sizing: border-box;
+  padding: 10px;
 
 }
-
 
 #mobile-nav {
   display: none; 
@@ -107,6 +101,20 @@ main {padding: 2vw 6vw;}
 
 
 
+#dropdown-content {
+  display: none;
+  position: absolute;
+  margin: 5px 0 0 145px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 5px;
+  z-index: 3001;
+}
+.dropdown-links a{color: black;}
+.dropdown-links:hover {text-decoration: underline;}
+
+
 .site-title-heading {display: none;}
 // .content-container { border: 3px solid lime; }
 
@@ -124,7 +132,7 @@ main {padding: 2vw 6vw;}
     width: 100%; 
     color: white;
     font-size: 48px;
-    display: none;    
+      
   }
 
 
@@ -603,7 +611,7 @@ footer { width: 100vw; padding: 50px; box-sizing: border-box;}
 }
 
 @media screen and (max-width: 1050px){
-  .featured-bling-product { padding: 15px; border: 2px solid blue;}
+  .featured-bling-product { padding: 20px; }
 }
 
 @media screen and (max-width: 1300px) {

@@ -1,29 +1,25 @@
-<nav class="site-navigation" id="pink-nav-bar">
+<div class="site-navigation" id="site-navigation-wrapper">
   <ul class="site-navigation-list magenta-inset-border magenta">
-    {.repeated section items}
+      <ul class="site-navigation-list magenta-inset-border magenta">
+      <li class="site-navigation-item"><a href="/">Home</a></li>
+      <li class="site-navigation-item"><a href="/about">About</a></li>
+      <li class="site-navigation-item"><a id="dropdown" onclick="toggleItem('dropdown-content')">Bling Shop</a></li>
+      <div id="dropdown-content" class="dropdown-content">
+        <ul>
+          <li class="dropdown-links"><a href="/bling-shop/phone-lanyards">Phone Lanyards</a></li>
+          <li class="dropdown-links"><a href="/bling-shop/chains">Mask/Glasses Chains</a></li>
+          <li class="dropdown-links"><a href="/bling-shop/merch">Merch</a></li>
+          <li class="dropdown-links"><a href="/bling-shop/digital-drops">Digital Drops</a></li>
+          
+        </ul>
+      </div>
+      <li class="site-navigation-item "><a href="/lookbook">Lookbook</a></li>
+      <li class="site-navigation-item "><a href="/blog">Blog</a></li>
+      <li class="site-navigation-item "><a href="/contact">Contact</a></li>
 
-      <li class="site-navigation-item {.section active} active-link{.end}">
-
-        <!-- collection link -->
-        {.section collection}
-          <a href="{fullUrl}">{navigationTitle}</a>
-        {.end}
-        
-
-        <!-- external link -->
-        {.section externalLink}
-          <a href="{url}"{.section newWindow} target="_blank"{.end}>
-            {title}
-          </a>
-        {.end}
-
-      </li>
-
-    {.end}
-
-        <a id="main-nav-close" onclick='toggleNavigation(0, true)' class="close-btn scale-up-center mobile-hide">X</a>
-        <a id="expand-close" style="display: none" onclick='toggleNavigation(0, false)' class="close-btn scaleup-center mobile-hide"><i class="fas fa-expand-alt"></i></a>
-        <a id="cart-nav" href="/cart" class="close-btn scale-up-center"><i class="fa fas">&#xf07a;</i></a>
+        {#  <a id="main-nav-close" onclick='toggleNavigation(0, true)' class="close-btn scale-up-center mobile-hide">X</a>  }
+        <a id="expand-close" style="display: none" onclick='toggleNavigation(0, false)' class="close-btn scaleup-center mobile-hide"><img style="height: 21px; width: 18px;" src="/assets/expand.svg"></a>
+        <a id="cart-nav" href="/cart" class="close-btn scale-up-center"><img style="height: 21px; width: 18px;" src="/assets/cart.svg"></a>
         <a id="mobile-nav-close" onclick='toggleNavigation(1, false)' class="close-btn scale-up-center mobile-show">&#8801</a>
         <div class="mobile-show" id="mobile-nav-title">
           <a style="float: left;" onclick='toggleNavigation(1, false)'>Hang On</a>
@@ -33,7 +29,7 @@
           <ul> 
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
-            <li><a href="/bling-shop">Shop</a></li>
+            <li><a href="/bling-shop">Bling Shop</a></li>
             <li><a href="/lookbook">Lookbook</a></li>
             <li><a href="/blog">Blog</a></li>
             <li><a href="/contact">Contact</a></li>
@@ -41,4 +37,5 @@
         </div>
 
   </ul>
-</nav>
+</div>
+
