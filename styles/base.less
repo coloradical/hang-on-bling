@@ -41,10 +41,12 @@ ul {margin-block-start: 0;}
 a {text-decoration: none; font-size: 18px;}
 a:hover {cursor: url("/assets/bling-pointer.svg"), auto;}
 
-main {padding: 5vw 6vw;}
+main {padding: 2vw 6vw;}
 
 .site-container {
   border: 2px solid red;
+  
+  margin: auto;
 }
 
 .site-navigation { height: 50px; width: 100%; z-index: 300; position: fixed; top: 0; left: 0;  }
@@ -122,8 +124,9 @@ main {padding: 5vw 6vw;}
     width: 100%; 
     color: white;
     font-size: 48px;
-    display: none;
+    display: none;    
   }
+
 
   .fas {font-size: 12px;}
 
@@ -233,7 +236,7 @@ body.collection-type-blog.view-list {
    position: relative;
    background: none;
 
-   max-width: 1200px;
+  //  max-width: 1200px;
    padding: 0;
    left: 0;
 
@@ -288,6 +291,7 @@ body.collection-type-blog.view-list {
   max-width: 450px;
   z-index: -100!important;
   object-fit: contain;
+  max-height: 650px;
   
 }
 
@@ -319,7 +323,7 @@ body.collection-type-blog.view-list {
 }
 
 #productWrapper .product-price {
-  background: none!important;
+
   color: black; 
   text-align: left; 
   border: none!important;
@@ -448,24 +452,33 @@ div#yui_3_17_2_1_1607488832489_327 {
 
 .featured-bling-product {
   width: 100%;
-  max-width: 40%;
+  max-width: 42%;
   padding: 25px;
   float: left;
   flex-basis: 1;
   animation:scale-up-center .4s cubic-bezier(.39,.575,.565,1.000) both;
   z-index: 1;
   border: 2px solid rgba(0,0,0,0);
+  min-width: 300px;
 }
 
-.featured-bling-product h5 {font-size: 24px; float: left; }
-.featured-bling-product h5, h6 {margin: 0; font-weight: 200; padding: 20px 0 0 0;}
-.featured-bling-product h6 {float: right; font-size: 12px;  margin-top: 20px; text-align: center; text-transform: uppercase; padding: 2px; border-radius: 2px; background: lightblue; border: 1px solid black;}
-.featured-bling-product h6:hover {background: #b9c8f0; color: white; border: inset black 2px;}
+.featured-product-details-wrapper {
+
+  height: 30px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.featured-bling-product h5 {font-size: 18px; float: left; width: 50%; font-weight: 200;}
+.featured-bling-product h6 {width: 50%; font-weight: 200; padding-bottom: 5px;}
+.featured-bling-product h6 a {float: right; color: black; font-size: 12px; text-align: center; text-transform: uppercase; padding: 2px; border-radius: 2px; background: lightblue; border: 1px solid black;}
+.featured-bling-product h6 a:hover {background: #b9c8f0; color: white; border: inset black 2px;}
 .featured-bling-product:hover {border: 2px solid #e03593; background: white;}
 
 .product_img { height: 300px; width: auto; object-fit: cover;  padding: 0px; border: 1px solid black; background: white;}
 .featured-bling-product img {width: 100%;}
-.product_button {padding-top: 50px;}
+.product_button {padding-top: 20px;}
 .product_name {font-size: 24px;  }
 .product_description {height: 15px;}
 .chains .product_img {object-position: 0 0;}
