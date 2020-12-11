@@ -6,10 +6,11 @@
       <li class="site-navigation-item"><a id="dropdown" onclick="toggleItem('dropdown-content')">Bling Shop</a></li>
       <div id="dropdown-content" class="dropdown-content">
         <ul>
-          <li class="dropdown-links"><a href="/bling-shop/phone-lanyards">Phone Lanyards</a></li>
-          <li class="dropdown-links"><a href="/bling-shop/chains">Mask/Glasses Chains</a></li>
-          <li class="dropdown-links"><a href="/bling-shop/merch">Merch</a></li>
-          <li class="dropdown-links"><a href="/bling-shop/digital-drops">Digital Drops</a></li>
+          <li class="dropdown-links"><a href="/bling-shop">All Products</a></li>
+          <li class="dropdown-links"><a href="/phone-lanyards">Phone Lanyards</a></li>
+          <li class="dropdown-links"><a href="/chains">Mask/Glasses Chains</a></li>
+          <li class="dropdown-links"><a href="/merch">Merch</a></li>
+          <li class="dropdown-links"><a href="/digital-drops">Digital Drops</a></li>
           
         </ul>
       </div>
@@ -18,8 +19,8 @@
       <li class="site-navigation-item "><a href="/contact">Contact</a></li>
 
         {#  <a id="main-nav-close" onclick='toggleNavigation(0, true)' class="close-btn scale-up-center mobile-hide">X</a>  }
-        <a id="expand-close" style="display: none" onclick='toggleNavigation(0, false)' class="close-btn scaleup-center mobile-hide"><img style="height: 21px; width: 18px;" src="/assets/expand.svg"></a>
-        <a id="cart-nav" href="/cart" class="close-btn scale-up-center"><img style="height: 21px; width: 18px;" src="/assets/cart.svg"></a>
+        <a id="expand-close" style="display: none" onclick='toggleNavigation(0, false)' class="close-btn scaleup-center mobile-hide"><img style="height: 21px; width: 18px;" src="assets/expand.svg"></a>
+        <a id="cart-nav" href="/cart" class="close-btn scale-up-center"><img style="height: 21px; width: 18px;" src="assets/cart.svg"></a>
         <a id="mobile-nav-close" onclick='toggleNavigation(1, false)' class="close-btn scale-up-center mobile-show">&#8801</a>
         <div class="mobile-show" id="mobile-nav-title">
           <a style="float: left;" onclick='toggleNavigation(1, false)'>Hang On</a>
