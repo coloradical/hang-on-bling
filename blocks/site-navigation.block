@@ -1,0 +1,42 @@
+<div class="site-navigation" id="site-navigation-wrapper">
+  <ul class="site-navigation-list magenta-inset-border magenta">
+      <ul class="site-navigation-list magenta-inset-border magenta">
+      <li class="site-navigation-item"><a href="/">Home</a></li>
+      <li class="site-navigation-item"><a href="/about">About</a></li>
+      <li class="site-navigation-item"><a id="dropdown" onclick="toggleItem('dropdown-content')">Bling Shop</a></li>
+      <div id="dropdown-content" class="dropdown-content">
+        <ul>
+          <li class="dropdown-links"><a href="/bling-shop">All Products</a></li>
+          <li class="dropdown-links"><a href="/phone-lanyards">Phone Lanyards</a></li>
+          <li class="dropdown-links"><a href="/chains">Mask/Glasses Chains</a></li>
+          <li class="dropdown-links"><a href="/merch">Merch</a></li>
+          <li class="dropdown-links"><a href="/digital-drops">Digital Drops</a></li>
+          
+        </ul>
+      </div>
+      <li class="site-navigation-item "><a href="/lookbook">Lookbook</a></li>
+      <li class="site-navigation-item "><a href="/blog">Blog</a></li>
+      <li class="site-navigation-item "><a href="/contact">Contact</a></li>
+
+        {#  <a id="main-nav-close" onclick='toggleNavigation(0, true)' class="close-btn scale-up-center mobile-hide">X</a>  }
+        <a id="expand-close" style="display: none" onclick='toggleNavigation(0, false)' class="close-btn scaleup-center mobile-hide"><img style="height: 21px;" src="https://static1.squarespace.com/static/5fd02eb8e589ab2987f35c47/5fd309baa0405a46535689da/5fd309ba248ae5761f46fcbc/1607666110021/Asset+1.png?format=750w"></a>
+        <a id="cart-nav" href="/cart" class="close-btn scale-up-center"><img style="height: 21px; " src="https://static1.squarespace.com/static/5fd02eb8e589ab2987f35c47/5fd309baa0405a46535689da/5fd309be6556533973a5f3c9/1607666114272/CART.png?format=1000w"></a>
+        <a id="mobile-nav-close" onclick='toggleNavigation(1, false)' class="close-btn scale-up-center mobile-show">&#8801</a>
+        <div class="mobile-show" id="mobile-nav-title">
+          <a style="float: left;" onclick='toggleNavigation(1, false)'>Hang On</a>
+          <a id="secondary-mobile-close" onclick='toggleNavigation(1, true)'>[X]</a>
+        </div>
+        <div class="scale-in-ver-top pink magenta-inset-border" id="mobile-nav">
+          <ul> 
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/bling-shop">Bling Shop</a></li>
+            <li><a href="/lookbook">Lookbook</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+  </ul>
+</div>
+
