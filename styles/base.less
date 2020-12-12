@@ -119,10 +119,10 @@ main {padding: 2vw 6vw;}
 .site-title-heading {display: none;}
 // .content-container { border: 3px solid lime; }
 
-.site-footer {
-  display: none; 
-  // site-footer is an additional section for blocks, editable on CMS end 
-}
+// .site-footer {
+//   display: none; 
+//   // site-footer is an additional section for blocks, editable on CMS end 
+// }
 
 .logo-wrapper {width: 100%; text-align: center; margin: 4vw 2vw;}
   
@@ -527,6 +527,11 @@ div#page-5fd02ee2cb6bfe602c47a5ae {
 }
 
 // ############## FOOTER 
+footer.site-footer {
+  margin: 0!important;
+  padding: 0!important;
+}
+
 footer { width: 100vw; padding: 50px; box-sizing: border-box;}
 .email-mailchimp-wrapper {width: 100%; display: flex; align-items: center; justify-content: center;}
 .email-mailchimp-left {width: 20%; float: left; margin-right: 5%;}
@@ -534,7 +539,7 @@ footer { width: 100vw; padding: 50px; box-sizing: border-box;}
 .email-mailchimp-right {width: 60%;float: right; max-width: 700px;}
 #mce-EMAIL {width: calc(700px); border-radius: 0; height: 50px; font-size: 18px; float: left;}
 #mc-embedded-subscribe {float: right; border-radius: 0; height: 50px; font-size: 18px; text-transform: uppercase; width: 150px;}
-.nav-tree ul{width: 100%; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; text-align: center;}
+.nav-tree ul{width: 100%; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; text-align: center; margin: 50px 0 0 0; padding: 0; }
 .nav-tree li {list-style-type: none; color: black; padding: 2px 15px;}
 .nav-tree a {color: black; font-size: 12px;}
 .nav-tree li:hover {text-decoration: underline; font-size: 14px;}
