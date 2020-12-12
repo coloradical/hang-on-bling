@@ -5,6 +5,7 @@
 
 * {
   font-family: 'Consolas', monospace !important;
+  cursor: url("/assets/bling-cursor.svg"), auto;
 }
 
 html {
@@ -24,7 +25,7 @@ body {
   background: -moz-radial-gradient(bottom right, #E03693, #B9C8F0);
   background: radial-gradient(to top left, #E03693, #B9C8F0);
   overflow-x: hidden; 
-  cursor: url("/assets/bling-cursor.svg"), auto;
+  opacity: 0;  
 
 } 
 
@@ -37,8 +38,8 @@ p { font-family: Consolas, monaco, monospace; font-size: 16px; font-style: norma
 blockquote { font-family: Consolas, monaco, monospace; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; } 
 pre { font-family: Consolas, monaco, monospace; font-size: 11px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; }
 ul {margin-block-start: 0;}
-a {text-decoration: none; font-size: 18px;}
-a:hover {cursor: url("/assets/bling-pointer.svg"), auto;}
+a {text-decoration: none; font-size: 18px; }
+a:hover {cursor: url("/assets/bling-pointer.svg"), auto !important;}
 
 main {padding: 2vw 6vw;}
 
@@ -150,18 +151,7 @@ main {padding: 2vw 6vw;}
 
   .fas {font-size: 12px;}
 
-/* Homepage
-***************************************************/
 
-body.homepage {
-  background-image: url("/assets/hangon_bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  }
-
-.homepage .logo-wrapper{
-  display: none;
-}
 
 // BLOCK STYLING 
 
@@ -732,6 +722,10 @@ footer { width: 100vw; padding: 50px; box-sizing: border-box;}
 @keyframes expand {0% {position: fixed; left: -100%; margin-left: 90px;} 100% {position: fixed; left: 0%; margin-left: 0px;}}
 
 
+@-webkit-keyframes fade-out{0%{opacity:1}100%{opacity:0}}@keyframes fade-out{0%{opacity:1}100%{opacity:0}}
+@-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
+.fade-out{-webkit-animation:fade-out 1s ease-out both;animation:fade-out 1s ease-out both}
+.fade-in{-webkit-animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both}
 
 .scale-in-ver-top{-webkit-animation:scale-in-ver-top .5s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-ver-top .5s cubic-bezier(.25,.46,.45,.94) both}
 @-webkit-keyframes scale-in-ver-top{0%{-webkit-transform:scaleY(0);transform:scaleY(0);-webkit-transform-origin:100% 0;transform-origin:100% 0;opacity:1}100%{-webkit-transform:scaleY(1);transform:scaleY(1);-webkit-transform-origin:100% 0;transform-origin:100% 0;opacity:1}}@keyframes scale-in-ver-top{0%{-webkit-transform:scaleY(0);transform:scaleY(0);-webkit-transform-origin:100% 0;transform-origin:100% 0;opacity:1}100%{-webkit-transform:scaleY(1);transform:scaleY(1);-webkit-transform-origin:100% 0;transform-origin:100% 0;opacity:1}}
