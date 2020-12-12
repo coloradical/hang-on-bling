@@ -44,7 +44,6 @@ a:hover {cursor: url("/assets/bling-pointer.svg"), auto !important;}
 main {padding: 2vw 6vw;}
 
 .site-container {
-  
   margin: auto;
 }
 
@@ -64,22 +63,11 @@ main {padding: 2vw 6vw;}
   max-width: 150px; 
   width: 100%;
 }
-#mobile-nav-title {
-  max-width: 150px; height: 40px;
-}
+#mobile-nav-title {max-width: 150px; height: 40px;}
 #mobile-nav-title a {color: white;}
 #mobile-nav ul {padding: 15px 0px; list-style-type: none; margin: 0;}
-
-#mobile-nav a {
-  padding: 15px 0px;
-  color: white;
-}
-#secondary-mobile-close {
-  display: none; 
-  color: white; 
-  float: right;
-}
-
+#mobile-nav a {padding: 15px 0px; color: white;}
+#secondary-mobile-close {display: none; color: white; float: right;}
 .site-navigation-item {
   display: inline-block;
   a {
@@ -88,19 +76,9 @@ main {padding: 2vw 6vw;}
     text-decoration: none;
     font-weight: 400;
     padding:2.5px 5px;
-
-    &:hover {
-      border: 1px solid black;
-    }
-  }
-
-  &.active-link > a {
-    text-decoration: underline;
-  }
-
+    &:hover {border: 1px solid black;}
+  } 
 }
-
-
 
 #dropdown-content {
   display: none;
@@ -114,42 +92,28 @@ main {padding: 2vw 6vw;}
 }
 .dropdown-links a{color: black;}
 .dropdown-links:hover {text-decoration: underline;}
-
-
 .site-title-heading {display: none;}
 // .content-container { border: 3px solid lime; }
 
-// .site-footer {
-//   display: none; 
-//   // site-footer is an additional section for blocks, editable on CMS end 
-// }
 
-.logo-wrapper {width: 100%; text-align: center; margin: 4vw 2vw;}
+.logo-wrapper {width: 100%; text-align: center; margin: 2vw 0vw;}
   
   .logo-wrapper img {max-width: 400px; width: 100%; cursor: url("/assets/bling-pointer.svg"), auto; }
   .logo:hover {transform: scale(1.05);}
   .page-title-h1 {
     text-transform: uppercase;
-    width: 80%;
     color: #fff;
     font-size: 36px;
     background: #b1a9f3;
     box-shadow: inset -2px -2px 0px #6A61C9, inset 2px 2px 0px #FFFFFF;
     height: 60px;
-    margin: 0 10%;
+    margin: 0 4vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid white;
+    border: 1px solid white;
   }
 
-  .page-title-h1:hover {
-    background: #6a61c9;
-  }
-
-
-
-  .fas {font-size: 12px;}
 
 
 
@@ -159,54 +123,36 @@ main {padding: 2vw 6vw;}
 .centered-wrapper {margin-bottom: -10px;}
 
 
-.box {
-  border: 2px solid black;
-  padding: 25px;
-  transform: translate(10px, -10px);
-}
-
-.box-wrapper {
-  border: 2px solid black;
-  z-index: 2;
-  margin: 2vw;
-}
-
-.box-wrapper:hover {
-  transform: scale(1.01);
-}
-
+.box {border: 2px solid black; padding: 25px; transform: translate(10px, -10px);}
+.box-wrapper {border: 2px solid black; z-index: 2; margin: 2vw 4vh;}
+.box-wrapper:hover {transform: scale(1.01);}
 .img-box {width: 100%; margin: -6px 0px -10px 0px;}
 .window-bar-wrapper {border: 2px solid black; margin: 2vw;}
-
 .window-bar {
   width: 100%;
   top: 0; 
-  height: 35px;
- 
+  height: 35px; 
   color: white;
   display: inline-block;
 }
-
-// .window-bar img {margin: -10px 0px 0px 0px;}
 .window-bar a {float: right;}
 .window-bar p {float: left; padding: 5px 5px 5px 5px; margin: 0 0 0 5px;}
-
 .close-btn {padding: 4px 10px;
    color: white; background: rgba(255,255,255,0.5); float: right; border: 2px solid white;}
-.close-btn:hover {color: black; border: 2px solid black;}
+// .close-btn:hover {color: black; border: 2px solid black;}
 
 .sticker {
   position: absolute; 
-  max-width: 100px; 
   z-index: 50; 
 }
 
 #jonas_caption {
-  
-  position: absolute; margin: 30% 0 0 15%; max-width: 400px;
+  position: absolute; margin: 40% 0 0 15%; max-width: 500px;
 }
 
-
+.flex-float {display: flex; width: 100%;}
+.float-left {float: left; width: 50%; }
+.float-right {float: right; width: 50%;}
 
 
 //######################## ABOUT PAGE 
@@ -522,7 +468,7 @@ div#yui_3_17_2_1_1607488832489_327 {
 // ################### CONTACT PAGE 
 div#page-5fd02ee2cb6bfe602c47a5ae {
   background: white;
-  padding: 50px 0px;
+  
   margin: 0;
 }
 
@@ -552,6 +498,7 @@ footer { width: 100vw; padding: 50px; box-sizing: border-box;}
     .email-mailchimp-left {width: 100%; display: flex; justify-content: center;}
     .footer-logo {height: 150px; width: auto;}
     .email-mailchimp-right {width: 100%; text-align: center;}
+
 }
 
 
@@ -577,9 +524,9 @@ footer { width: 100vw; padding: 50px; box-sizing: border-box;}
   .site-navigation-item {display: none;}
   .switch-first {order: 0;}
   .switch-second {order: 1;}
- 
-  
-  
+  .box-wrapper {margin: 10vw 2vw !important;}
+  .float-left {order: 2;}
+
 }
 
 @media screen and (max-width: 900px) {
