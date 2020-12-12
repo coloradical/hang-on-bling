@@ -40,6 +40,10 @@ pre { font-family: Consolas, monaco, monospace; font-size: 11px; font-style: nor
 ul {margin-block-start: 0;}
 a {text-decoration: none; font-size: 18px; }
 a:hover {cursor: url("/assets/bling-pointer.svg"), auto !important;}
+a img:hover {cursor: url("/assets/bling-pointer.svg"), auto !important;}
+button a:hover {cursor: url("/assets/bling-pointer.svg"), auto !important;}
+.magenta-btn span{cursor: url("/assets/bling-pointer.svg"), auto !important;}
+
 
 main {padding: 2vw 6vw;}
 
@@ -47,7 +51,12 @@ main {padding: 2vw 6vw;}
   margin: auto;
 }
 
-.site-navigation { height: 40px; width: 100%; z-index: 300; position: fixed; top: 0; left: 0;  }
+.sqs-pill-shopping-cart-content {
+  background: blue;
+  margin-top: 40px;
+}
+
+.site-navigation { height: 40px; width: 100%; z-index: 3000!important; position: fixed; top: 0; left: 0;  }
 .site-navigation .close-btn {margin-top: -6px;}
 .site-navigation-list {
   height: 40px; width: 100%; z-index: 300; position: fixed; top: 0; left: 0; box-sizing: border-box;
@@ -203,19 +212,19 @@ body.collection-type-blog.view-list {
 
   width: 100%;
   height: 100%;
-  max-width: 110px;
-  overflow: scroll;
+  max-width: 120px;
+ 
   max-height: 625px;
   display: inline-block;
   justify-content: space-between;
   flex-direction: column;
   margin-right: 50px;
-  
+  overflow-x: hidden;
 }
 
 
 #productGallery #productThumbnails .content-fill {
-  width: 100px!important; 
+  width: 90px!important; 
   margin-top: 25px;
   height: 100px !important;
   overflow-x: scroll;
@@ -232,11 +241,12 @@ body.collection-type-blog.view-list {
   border: 1px solid black;
 }
 
-#productSummary {background: rgba(255,255,255,0.5)}
+#productSummary {background: rgba(255,255,255,0.5); padding: 25px 50px 200px 50px; }
 
 #productSlideshow .slide{
   display: inline-block;
   flex-direction: row;
+
 }
 
 #productSlideshow .sqs-gallery-design-stacked-slide {
@@ -244,11 +254,9 @@ body.collection-type-blog.view-list {
   display: inline-block;
   flex-direction: row;
   margin:0 150px;
-  width: 80%;
-  max-width: 450px;
-  z-index: -100!important;
-  object-fit: contain;
-  max-height: 650px;
+  max-width: 560px;
+  width: 100%; 
+
   
 }
 
@@ -256,7 +264,7 @@ body.collection-type-blog.view-list {
   
   height: auto;
   z-index: -100!important;
-  padding-bottom: 100px;
+  
   
   
 }
