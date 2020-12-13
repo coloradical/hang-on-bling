@@ -10,7 +10,19 @@
 {.if authorFilter}
   <p class="filtered-by">Filtered by Categories: {author.displayName}</p>
 {.end}
+<div class="blog-notif-wrapper">
 
+<div class="blog-notif">
+<h1 class="title">Hang On Bling Blog <a href="https://www.hangonbling.com/about" style=" color: white;" class="blog-close-btn" >?</a></h1>
+<div class="blog-notif-content">
+  <p>We are really trying to build a community around shared childhood experiences, and this forum will allow individuals and brands who love Hang On to post about everything from quarantine blues to their favorite y2k fashion trends. Please use the contact form to get in touch with any ideas!</p>
+  <br> 
+  <a href="https://www.hangonbling.com/contact" target="_blank" class="blog-notif-button">CONTACT US</a>  <a href="#start-blog"  class="blog-notif-button">READ MORE</a>
+
+</div>
+</div>
+</div>
+<div id="start-blog" style="height: 100px;"></div>
 <!-- item loop -->
 {.repeated section items}
 
@@ -56,8 +68,8 @@
       </div>
       <div class="blog-list-nav">
       <div class="blog-list-nav-icons">
-           {.repeated section categories}
-      <a class="category" href="{collection.fullUrl}?category={@|url-encode}">{@}</a>{.alternates with},
+           {.repeated section categories}CATEGORIES: 
+      <a class="category" href="{collection.fullUrl}?category={@|url-encode}">{@}</a>{.alternates with}
           {.end}
       </div>
 
