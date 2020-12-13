@@ -28,7 +28,7 @@
     </h1>
     <div class="blog-posted-date">
     <span class="meta">
-      <a href="{fullUrl}" class="permalink"> Message received:<time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y - %T }</time></a>
+      <a href="{fullUrl}" class="permalink"> Message received: <time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y - %T }</time></a>
     </span>
     </div>
     <!-- excerpt or body -->
@@ -52,14 +52,17 @@
       </div>
       <div class="blog-list-nav">
       <div class="blog-list-nav-icons">
-            💬 {.repeated section categories}
+           {.repeated section categories}
       <a class="category" href="{collection.fullUrl}?category={@|url-encode}">{@}</a>{.alternates with},
-    {.end}
+          {.end}
       </div>
 
         <div class="blog-list-nav-button">
-        <a class="link" href="{fullUrl}">View Full Message</a>  
+          
+          <a class="link" href="{fullUrl}">View Full Message >></a>  
+          <span class="comments">💬({@|comment-count})<span>
       </div>
+
     {.or}
       {body}
             

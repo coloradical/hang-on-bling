@@ -2,55 +2,55 @@
 {.section item}
 
   <!--WRAPPER-->
-  <article id="post-{id}" class="{@|item-classes}" data-item-id="{id}">
+  <article id="post-{id}" class="full-blog-item {@|item-classes}" data-item-id="{id}">
 
     <!--POST TILE-->
     <h1 class="title" data-content-field="title">
-      {.passthrough?}
-        <a href="{sourceUrl}" target="_blank">{title}</a>
+      Blog Message - {.passthrough?}
+        <a href="{sourceUrl}" target="_blank"> {title}</a>
       {.or}
         {title}
       {.end}
     </h1>
+    <a href="/blog" style="margin: -30px 5px 0 0; color: white;" class="blog-close-btn" >X</a>
+
 
     <!--AUTHOR AND DATE-->
-    <p class="meta">
+    <div class="meta">
+    {.repeated section categories}
+      <a class="category" href="{collection.fullUrl}?category={@|url-encode}">{@}</a>{.alternates with},
+    {.end}
       <a href="{fullUrl}" class="permalink"><time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time></a>
-    </p>
+    </div>
 
     <!--MAIN CONTENT-->
-    {body}
+    <div class="blog-content-wrapper">
+    {.repeated section tags}<a class="tag" href="{collection.fullUrl}?tag={@|url-encode}"><span style="color: red;">{@}:</span> <span style="color: black; margin-top: 10px;">{body}</span></a>{.alternates with},{.end}
+    </div>
 
     <!--BLOG INJECTION-->
     {postItemInjectCode}
 
     <!--CATEGORIES-->
-    {.repeated section categories}
-      <a class="category" href="{collection.fullUrl}?category={@|url-encode}">{@}</a>{.alternates with},
-    {.end}
 
-    <!--TAGS-->
-    {.repeated section tags}
-      <a class="tag" href="{collection.fullUrl}?tag={@|url-encode}">{@}</a>{.alternates with},
-    {.end}
+    <div class="blog-buttons">
+           <a href="{fullUrl}" class="permalink"><time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y - %T}</time></a>
 
-    <!--SHARE AND LIKE-->
-    {@|like-button}
-    {@|social-button}
+      <span class="social-span">{@|like-button} </span>
+      <span class="social-span">{@|social-button}</span>
+    </div>
 
-
-    <!--LOCATION-->
-    {.section location}
-      {.section addressTitle}
-        {addressTitle}
-        {addressLine1}
-        {addressLine2}
-        {addressCountry}
-      {.end}
-    {.end}
 
     <!--COMMENTS-->
-    {@|comments}
+    <div class="comment-section">
+    <span >Reply to: {.repeated section tags}<a class="tag" href="{collection.fullUrl}?tag={@|url-encode}">{@}</a>{.alternates with},{.end}</span>
+      {@|comments}
+    </div>
+
+
+<!--PAGINATION-->
+
+
 
   </article>
 
@@ -59,6 +59,7 @@
 
 <!--PAGINATION-->
 {.section pagination}
+
   <nav class="blog-item-pagination">
 
     <!--NEWER PAGE-->
@@ -76,4 +77,5 @@
     {.end}
 
   </nav>
+
 {.end}
