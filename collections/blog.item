@@ -35,7 +35,7 @@
       <span class="social-span"><a>{@|social-button}</a> </span>
       
            {.repeated section categories}
-      <a class="category" href="{collection.fullUrl}?category={@|url-encode}"> {@} |</a>{.alternates with},
+      <a class="category" href="{collection.fullUrl}?category={@|url-encode}"> 📌 {@} |</a>{.alternates with},
           {.end}
       
     </div>
