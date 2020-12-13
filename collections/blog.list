@@ -23,7 +23,7 @@
         <a href="{sourceUrl}" target="_blank">{title}</a>
       {.or}
         <a href="{fullUrl}">{title} - Instant Message</a>
-        <a href="{sourceUrl}" class="blog-close-btn" target="_blank" >&#8599;</a>
+        <a href="{fullUrl}" class="blog-close-btn" target="_blank" >&#8599;</a>
       {.end}
     </h1>
     <div class="blog-posted-date">
@@ -44,8 +44,10 @@
         <div class="blog-list-right">
         
         <p>{.if excerpt}
-        {.repeated section tags}<a class="tag" href="{collection.fullUrl}?tag={@|url-encode}">{@}: </a>{.alternates with},{.end}
-        {excerpt} </p>
+        {.repeated section tags}<a class="tag" href="{collection.fullUrl}?tag={@|url-encode}">{@} said: </a>{.alternates with},{.end}
+        {excerpt} 
+        <a style="font-size: 14px; color: red;" href="{fullUrl}">Read more...</a>  
+        </p>
         
         </div>
         

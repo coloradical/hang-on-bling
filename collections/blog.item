@@ -16,12 +16,7 @@
 
 
     <!--AUTHOR AND DATE-->
-    <div class="meta">
-    {.repeated section categories}
-      <a class="category" href="{collection.fullUrl}?category={@|url-encode}">{@}</a>{.alternates with},
-    {.end}
-      <a href="{fullUrl}" class="permalink"><time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time></a>
-    </div>
+   
 
     <!--MAIN CONTENT-->
     <div class="blog-content-wrapper">
@@ -59,7 +54,6 @@
 
 <!--PAGINATION-->
 {.section pagination}
-
   <nav class="blog-item-pagination">
 
     <!--NEWER PAGE-->
