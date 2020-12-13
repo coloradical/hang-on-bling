@@ -29,10 +29,15 @@
     <!--CATEGORIES-->
 
     <div class="blog-buttons">
-           <a href="{fullUrl}" class="permalink"><time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y - %T}</time></a>
+           <a href="{fullUrl}" class="permalink"><time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y - %T}</time> | </a>
 
-      <span class="social-span">{@|like-button} </span>
-      <span class="social-span">{@|social-button}</span>
+      <span class="social-span"><a>{@|like-button} |</a> </span>
+      <span class="social-span"><a>{@|social-button}</a> </span>
+      
+           {.repeated section categories}
+      <a class="category" href="{collection.fullUrl}?category={@|url-encode}"> {@} |</a>{.alternates with},
+          {.end}
+      
     </div>
 
 
