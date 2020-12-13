@@ -14,27 +14,55 @@
 <!-- item loop -->
 {.repeated section items}
 
-  <article id="post-{id}" class="blog-list-item {@|item-classes}" data-item-id="{id}">
+  <article id="post-{id}" class="blog-list-item {@|item-classes}" data-item-id="{id}" style="height: 100%; max-height: 300px;">
     <!-- main image (thumbnail) -->
-    {.main-image?}
-      <a href="{fullUrl}" class="main-image content-fill">
-        <img {@|image-meta} />
-      </a>
-    {.end}
+   
     <!-- post title -->
     <h1 class="title" data-content-field="title">
       {.passthrough?}
         <a href="{sourceUrl}" target="_blank">{title}</a>
       {.or}
-        <a href="{fullUrl}">{title}</a>
+        <a href="{fullUrl}">{title} - Instant Message</a>
+        <a href="{sourceUrl}" class="blog-close-btn" target="_blank" >&#8599;</a>
       {.end}
     </h1>
+    <div class="blog-posted-date">
+    <span class="meta">
+      <a href="{fullUrl}" class="permalink"> Message received:<time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y - %T }</time></a>
+    </span>
+    </div>
     <!-- excerpt or body -->
-    {.if excerpt}
-      {excerpt}
-      <a class="link" href="{fullUrl}">Read More</a>
+    <div class="blog-list-wrapper">
+    <div class="blog-list-left">
+     {.main-image?}
+      <a href="{fullUrl}" class="main-image content-fill">
+        <img {@|image-meta} />
+      </a>
+    {.end}
+    
+      </div>
+        <div class="blog-list-right">
+        
+        <p>{.if excerpt}
+        {.repeated section tags}<a class="tag" href="{collection.fullUrl}?tag={@|url-encode}">{@}: </a>{.alternates with},{.end}
+        {excerpt} </p>
+        
+        </div>
+        
+      </div>
+      <div class="blog-list-nav">
+      <div class="blog-list-nav-icons">
+            💬 {.repeated section categories}
+      <a class="category" href="{collection.fullUrl}?category={@|url-encode}">{@}</a>{.alternates with},
+    {.end}
+      </div>
+
+        <div class="blog-list-nav-button">
+        <a class="link" href="{fullUrl}">View Full Message</a>  
+      </div>
     {.or}
       {body}
+            
     {.end}
   </article>
 
