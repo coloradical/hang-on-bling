@@ -62,29 +62,29 @@ function toggleNavigation(toggleNumber, shrink){
 
 }
 
-function filterProducts(productType){
-  var lanyards = document.getElementsByClassName("lanyards");
-  var chains = document.getElementsByClassName("chains");
-  var productGrid = document.getElementById('featured-product-wrapper');
+// function filterProducts(productType){
+//   var lanyards = document.getElementsByClassName("lanyards");
+//   var chains = document.getElementsByClassName("chains");
+//   var productGrid = document.getElementById('featured-product-wrapper');
 
-  console.log(chains);
+//   console.log(chains);
 
-  if (productType === 1){
-      productGrid.style.animation = "fade-in"
-      for (i=0; i < 8; i++){
-          chains[i].style.display = 'block';
-          lanyards[i].style.display = 'none';
-      }
-      toggleItem("filter-menu-wrapper");
-  } else if (productType === 2){
-      for (i=0; i < 8; i++){
-          lanyards[i].style.display = 'block';
-          chains[i].style.display = 'none';
-      }
-      toggleItem('filter-menu-wrapper');
-  }
+//   if (productType === 1){
+//       productGrid.style.animation = "fade-in"
+//       for (i=0; i < 8; i++){
+//           chains[i].style.display = 'block';
+//           lanyards[i].style.display = 'none';
+//       }
+//       toggleItem("filter-menu-wrapper");
+//   } else if (productType === 2){
+//       for (i=0; i < 8; i++){
+//           lanyards[i].style.display = 'block';
+//           chains[i].style.display = 'none';
+//       }
+//       toggleItem('filter-menu-wrapper');
+//   }
 
-}
+// }
 
 function toggleItem(elementName){
   var hideThis = document.getElementById(elementName);
