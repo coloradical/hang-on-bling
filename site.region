@@ -41,20 +41,7 @@
 
   </body>
   
-  <script>
-  var featuredBlock = document.getElementById('yui_3_17_2_1_1607503478760_272');
-    featuredBlock.classList.add('magenta-inset-border');
-    var productButtons = document.getElementsByClassName('product-price');
-    var productPrices = document.getElementsByClassName('sqs-money-native');
-    
-    for(i=0; i<productButtons.length; i++){
-      productButtons[i].classList.add("magenta-btn");
-      productPrices[i].insertAdjacentHTML('beforebegin', '<span>SHOP-</span>');
-    }
-
-    
-
-  </script>
+ 
 
 
 </html>
