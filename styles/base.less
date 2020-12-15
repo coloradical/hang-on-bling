@@ -74,10 +74,11 @@ main {padding: 2vw 6vw;}
   max-width: 150px; 
   width: 100%;
 }
-#mobile-nav-title {max-width: 150px; height: 40px;}
+#mobile-nav-title {max-width: 300px; height: 40px;}
 #mobile-nav-title a {color: white;}
 #mobile-nav ul {padding: 15px 0px; list-style-type: none; margin: 0;}
-#mobile-nav a {padding: 15px 0px; color: white;}
+#mobile-nav a { color: white;}
+#mobile-nav li {margin: 10px 0px}
 #secondary-mobile-close {display: none; color: white; float: right;}
 .site-navigation-item {
   display: inline-block;
@@ -131,7 +132,7 @@ main {padding: 2vw 6vw;}
 // BLOCK STYLING 
 
 
-.centered-wrapper {margin-bottom: -10px;}
+.centered-wrapper {max-width: 100%; margin: 0 15% -10px 15%;}
 
 
 .box {border: 2px solid black; padding: 25px; transform: translate(10px, -10px);}
@@ -578,15 +579,20 @@ div#yui_3_17_2_1_1607488832489_327 {
   display: flex; 
   align-items: center;
   justify-content: center;
-  width: 100%; 
-  margin-top: 2.5vh;
+  width: 90%; 
+  margin: 2.5vh 5%;
 }
+
+
 
 .eye_sticker {
   padding: 20px;
   width: 100px;
 }
 
+.spotify-wrapper {
+  display: flex; justify-content: center; margin: 0 20vw;
+}
 
 // ################### CONTACT PAGE 
 div#page-5fd02ee2cb6bfe602c47a5ae {
@@ -622,18 +628,21 @@ footer { width: 100vw; padding: 50px; box-sizing: border-box;}
     .footer-logo {height: 150px; width: auto;}
     .email-mailchimp-right {width: 100%; text-align: center;}
     article {  padding-bottom: 35px;}
-  
+    
 }
 
 @media (max-width: 450px){
   article {padding-bottom: 65px;}
   .meta a {padding-left: 0px; }
-  .product {min-width: 100%;}
+  #productList .product {width: 100%; }
   .blog-list-nav-button .comments {display: none;}
   .blog-list-nav-icons {overflow: scroll;}
   .blog-list-nav-button a {width: 90%; text-align: center;}
   .field-list{margin: 0 2vw;}
-  
+  .eye_sticker {width: 75px;}
+  .spotify-wrapper {margin: 0 5vw;}
+  .centered-wrapper {margin: 0 5vw!important;}
+
 }
 
 
