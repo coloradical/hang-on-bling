@@ -71,10 +71,10 @@ main {padding: 2vw 6vw;}
   padding: 10px; 
   margin-left: 4px; 
   position: fixed; top: 40px;
-  max-width: 150px; 
+  max-width: 200px; 
   width: 100%;
 }
-#mobile-nav-title {max-width: 300px; height: 40px;}
+#mobile-nav-title {max-width: 200px; height: 40px;}
 #mobile-nav-title a {color: white;}
 #mobile-nav ul {padding: 15px 0px; list-style-type: none; margin: 0;}
 #mobile-nav a { color: white;}
@@ -608,7 +608,7 @@ footer.site-footer {
   padding: 0!important;
 }
 
-footer { width: 100vw; padding: 50px; box-sizing: border-box;}
+footer { width: 100vw; padding: 50px; box-sizing: border-box; margin-top: 20vw;}
 .email-mailchimp-wrapper {width: 100%; display: flex; align-items: center; justify-content: center;}
 .email-mailchimp-left {width: 20%; float: left; margin-right: 5%;}
 .footer-logo {width: 100%;}
@@ -630,17 +630,35 @@ footer { width: 100vw; padding: 50px; box-sizing: border-box;}
     .email-mailchimp-right {width: 100%; text-align: center;}
     article {  padding-bottom: 35px;}
     #productSummary {
-      background: rgba(255, 255, 255, .5);
+      background: rgba(255, 255, 255, .75);
       width: 88%;
       margin: 5vw;
       padding: 25px;
+  }
+  .page-title-h1 {font-size: 22px!important;}
+  main {padding: 5vw 3vw; }
+
+  #productWrapper {
+    transform: translateX(-6vw);
+  }
+
+  #productWrapper #productGallery {
+    width: 100%;
+    order: 0;
+  }
+  
+  #productWrapper #productDetails {
+    float: left; 
+    width: 100%;
+    order: 1!important;
+
   }
 }
 
 @media (max-width: 450px){
   article {padding-bottom: 65px;}
   .meta a {padding-left: 0px; }
-  #productList .product {width: 90%; margin-left: 5%; }
+  #productList .product {width: 90%; margin-left: 5%; margin-bottom: 10%;  }
   .blog-list-nav-button .comments {display: none;}
   .blog-list-nav-icons {overflow: scroll;}
   .blog-list-nav-button a {width: 90%; text-align: center;}
@@ -684,44 +702,6 @@ footer { width: 100vw; padding: 50px; box-sizing: border-box;}
 
 }
 
-@media screen and (max-width: 900px) {
-  main {padding: 5vw 3vw; }
-
-  #productWrapper {
-    transform: translateX(-6vw);
-  }
-
-  #productWrapper #productGallery {
-    width: 100%;
-    order: 0;
-  }
-  
-  #productWrapper #productDetails {
-    float: left; 
-    width: 100%;
-    order: 1!important;
-
-  }
-//   #productGallery #productThumbnails {
-//     max-height: 110px;
-//     max-width: 100%; 
-//     display: inline-flex;
-//     flex-direction: row!important;
-//     margin-top: 50px;
-//   }
-//   #productSlideshow .sqs-gallery-design-stacked-slide {
-    
-//     width: 50%;
-//     margin: 120px 0px!important;
-    
-
-  
-//   }
-
-//   div#productDetails {
-//     margin-top: 125px;
-// }
-}
 
 @media screen and (max-width: 1050px){
   .featured-bling-product { padding: 20px; }
