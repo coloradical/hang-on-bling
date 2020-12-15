@@ -157,9 +157,6 @@ main {padding: 2vw 6vw;}
   z-index: 50; 
 }
 
-#jonas_caption {
-  position: absolute; margin: 40% 0 0 15%; max-width: 500px;
-}
 
 .flex-float {display: flex; width: 100%;}
 .float-left {float: left; width: 50%; }
@@ -203,6 +200,7 @@ article .title {
   margin: 0; 
   padding: 5px;
   color: white;
+  height: 40px;
 }
 
 
@@ -216,7 +214,7 @@ article .title {
   border-top: 1px solid white; height: 200px; display: flex;
 
 }
-.blog-list-left {width: 20%; border: 4px solid #DBDBDC;  display: flex; background-image: url('https://breedingbetterdogs.com/paulcosta/sites/default/files/styles/extra_large/public/field/image/Windows-default-shortcut-icon.png?itok=zkh2swTd'); background-size: contain; background-repeat: no-repeat; background-position: center;}
+.blog-list-left {width: 20%; max-height: 250px; border: 4px solid #DBDBDC;  display: flex; background-image: url('https://breedingbetterdogs.com/paulcosta/sites/default/files/styles/extra_large/public/field/image/Windows-default-shortcut-icon.png?itok=zkh2swTd'); background-size: contain; background-repeat: no-repeat; background-position: center;}
 .blog-list-right {width: 80%; border: 4px solid #DBDBDC;  background: white; 
   padding: 10px 5px;
   border: 2px solid black 2px solid gray;
@@ -228,6 +226,8 @@ article .title {
 .blog-list-right p {border: none!important; font-size: 14px; padding: 0;}
 
 article .title a {color: white; font-size: 18px; }
+article .title h1 {height: 35px;}
+.blog-title {max-width: calc(100% - 20px); float: left;}
 .blog-list-nav {box-sizing: border-box; width: 100%; border-top: 1px solid gray; padding: 2px;}
 .blog-list-nav-icons {float: left; margin-left: 10px; padding: 10px 2px; display: table-row;}
 .blog-list-nav-icons a{border: 1px solid black!important; border-radius: 4px; padding: 1px 3px; font-size: 12px; text-transform: uppercase;}
@@ -388,7 +388,7 @@ span.comments{float: right; font-size: 14px!important; margin-right: 10px;}
 
 #productWrapper .product-price {
   color: gray; 
-  margin: 15px 0px!important;
+  margin: 10px 0px!important;
   display: none;
 }
 
@@ -626,8 +626,14 @@ footer { width: 100vw; padding: 50px; box-sizing: border-box;}
 }
 
 @media (max-width: 450px){
-
-  .product {min-width: 400px;}
+  article {padding-bottom: 65px;}
+  .meta a {padding-left: 0px; }
+  .product {min-width: 100%;}
+  .blog-list-nav-button .comments {display: none;}
+  .blog-list-nav-icons {overflow: scroll;}
+  .blog-list-nav-button a {width: 90%; text-align: center;}
+  .field-list{margin: 0 2vw;}
+  
 }
 
 

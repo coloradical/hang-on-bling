@@ -32,9 +32,9 @@
     <!-- post title -->
     <h1 class="title" data-content-field="title">
       {.passthrough?}
-        <a href="{sourceUrl}" target="_blank">{title}</a>
+        <a  href="{sourceUrl}" target="_blank">{title}</a>
       {.or}
-        <a href="{fullUrl}">{title} - Instant Message</a>
+        <a class="blog-title" href="{fullUrl}">{title}</a>
         <a href="/blog" style=" color: white;" class="blog-close-btn" >X</a>
         <a href="{fullUrl}" class="blog-close-btn" target="_blank" >&#8599;</a>
         
@@ -68,7 +68,7 @@
       </div>
       <div class="blog-list-nav">
       <div class="blog-list-nav-icons">
-           {.repeated section categories}CATEGORIES: 
+           CATEGORIES: {.repeated section categories}
       <a class="category" href="{collection.fullUrl}?category={@|url-encode}">{@}</a>{.alternates with}
           {.end}
       </div>
