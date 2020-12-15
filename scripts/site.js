@@ -65,7 +65,7 @@ function toggleNavigation(toggleNumber, shrink){
 function filterProducts(productType){
   var lanyards = document.getElementsByClassName("lanyards");
   var chains = document.getElementsByClassName("chains");
-  var productGrid = document.getElementById('featured-product-grid');
+  var productGrid = document.getElementById('featured-product-wrapper');
 
   console.log(chains);
 
