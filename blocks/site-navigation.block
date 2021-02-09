@@ -10,6 +10,7 @@
           <li class="dropdown-links"><a href="/bling-shop?category=Lanyards">Phone Lanyards</a></li>
           <li class="dropdown-links"><a href="/bling-shop?category=Chains">Mask/Glasses Chains</a></li>
           <li class="dropdown-links"><a href="/merch">Merch</a></li>
+          <li class="dropdown-links"><a href="/collabs">Collabs</a></li>
           <li class="dropdown-links"><a href="/digital-drops">Digital Drops</a></li>
           
         </ul>
@@ -19,7 +20,7 @@
       <li class="site-navigation-item "><a href="/contact">Contact</a></li>
 
         {#  <a id="main-nav-close" onclick='toggleNavigation(0, true)' class="close-btn scale-up-center mobile-hide">X</a>  }
-        <a id="expand-close" style="display: none" onclick='toggleNavigation(0, false)' class="close-btn scaleup-center mobile-hide"><img style="height: 21px;" src="https://static1.squarespace.com/static/5fd02eb8e589ab2987f35c47/5fd309baa0405a46535689da/5fd309ba248ae5761f46fcbc/1607666110021/Asset+1.png?format=750w" alt="expand icon"></a>
+        <a id="expand-close" style="display: none" onclick='toggleNavigation(0, false)' class="close-btn scaleup-center mobile-hide"><img style="height: 18px;" src="https://static1.squarespace.com/static/5fd02eb8e589ab2987f35c47/5fd309baa0405a46535689da/5fd309ba248ae5761f46fcbc/1607666110021/Asset+1.png?format=750w" alt="expand icon"></a>
         <a id="cart-nav" href="/cart" class="close-btn scale-up-center"><img style="height: 21px; " src="/assets/CART.svg" alt="cart icon"></a>
         <a id="mobile-nav-close" onclick='toggleNavigation(1, false)' class="close-btn scale-up-center mobile-show">&#8801</a>
         <div class="mobile-show" id="mobile-nav-title">
@@ -33,6 +34,8 @@
             <li><a href="/bling-shop">Bling Shop</a></li>
             <li><a href="/bling-shop">- All Products </a></li>
           <li><a href="/merch">- Merch</a></li>
+            <li><a href="/collabs">- Collabs</a></li>
+
           <li><a href="/digital-drops">- Digital Drops</a></li>
             <li><a href="/lookbook">Lookbook</a></li>
             <li><a href="/blog">Blog</a></li>
