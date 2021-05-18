@@ -10,7 +10,7 @@
           <li class="dropdown-links"><a href="/bling-shop?category=Lanyards">Phone Lanyards</a></li>
           <li class="dropdown-links"><a href="/bling-shop?category=Chains">Mask/Glasses Chains</a></li>
           <li class="dropdown-links"><a href="/merch">Merch</a></li>
-          <li class="dropdown-links"><a href="/collabs">Collabs</a></li>
+          <li class="dropdown-links"><a href="/bling-shop?category=Collabs">Collabs</a></li>
           <li class="dropdown-links"><a href="/digital-drops">Digital Drops</a></li>
           
         </ul>
@@ -34,7 +34,7 @@
             <li><a href="/bling-shop">Bling Shop</a></li>
             <li><a href="/bling-shop">- All Products </a></li>
           <li><a href="/merch">- Merch</a></li>
-            <li><a href="/collabs">- Collabs</a></li>
+            <li><a href="/bling-shop?category=Collabs">- Collabs</a></li>
 
           <li><a href="/digital-drops">- Digital Drops</a></li>
             <li><a href="/lookbook">Lookbook</a></li>
