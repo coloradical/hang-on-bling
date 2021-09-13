@@ -62,29 +62,27 @@ function toggleNavigation(toggleNumber, shrink){
 
 }
 
-// function filterProducts(productType){
-//   var lanyards = document.getElementsByClassName("lanyards");
-//   var chains = document.getElementsByClassName("chains");
-//   var productGrid = document.getElementById('featured-product-wrapper');
+// <script src="//uploader.squarewebsites.org/sqs-form-upload.min.js"></script>
+var script = document.createElement('script');
+script.src = 'https://code.jquery.com/jquery-3.4.1.min.js';
+script.type = 'text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script);
 
-//   console.log(chains);
+window.addEventListener("load", function(){
+  document.body.style.animation = "fade-in 1s cubic-bezier(.39,.575,.565,1.000";
+  document.body.style.opacity = "1";
+});
 
-//   if (productType === 1){
-//       productGrid.style.animation = "fade-in"
-//       for (i=0; i < 8; i++){
-//           chains[i].style.display = 'block';
-//           lanyards[i].style.display = 'none';
-//       }
-//       toggleItem("filter-menu-wrapper");
-//   } else if (productType === 2){
-//       for (i=0; i < 8; i++){
-//           lanyards[i].style.display = 'block';
-//           chains[i].style.display = 'none';
-//       }
-//       toggleItem('filter-menu-wrapper');
-//   }
 
-// }
+
+$(document).ready(function() { 
+    $('div#confirmed-page').append(' <h2> Want free shipping on your next order? </h2> ')
+  $('div#confirmed-page').append(' <a href="https://us2.list-manage.com/survey?id=ee9eff5005&u=17f239ae3b2110af2d35424a9" target="_blank" > Take our 5 second survey here! </a> ')
+  
+  });
+  
+ 
+
 
 function toggleItem(elementName){
   var hideThis = document.getElementById(elementName);
