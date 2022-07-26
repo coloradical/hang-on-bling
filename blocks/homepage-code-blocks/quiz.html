@@ -1,0 +1,306 @@
+<html>
+
+<style>
+    .quiz-wrapper {width: 100vw; height: 100%; background-image: url('https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/quiz.jpg'); 
+        background-size: cover; display: flex; align-items: center; justify-content: center; max-height: 1000px;}
+    .quiz-body {
+        
+        padding: 2.5%;
+        height: 100%; 
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        max-width: 800px;
+        max-height: 900px;
+    }
+    #slideCounterText {position: fixed;  height: 25px; width: 25px;  color: white; padding: 0; margin: 0;}
+    #begin-btn { color: white; font-size: 24px; padding: 2.5%;}
+    #glitter-text-wrapper {height: 50px; position: relative; width: 100%; text-align: center; top: 0;}
+    #glitter-text {width: 300px; height: auto; margin: 25px;}
+    .quiz-slides { height: calc(100% - 175px); margin-top: 75px; width: 100%; box-sizing: content-box; }
+    .left {width: 47.5%; height: 90%;  float: left; margin-top: 25px;}
+    .right {width: 47.5%; height: 90%;  float: right; margin-top: 25px;}
+    .third {width: 31%; padding: 0 0.5%; height: 90%;  float: left; margin-top: 25px; object-fit: cover; object-position: center top;}
+    .third .img-frame img {width: 100%; height: auto; }
+    .left:hover {transform: scale(1.025)}
+    .right:hover {transform: scale(1.025);}
+    .third-half:hover {transform: scale(1.025);}
+    .img-frame {  width: 100%; height: 90%; object-fit: cover; object-position: center center; }
+    .img-frame img {width: 90%; height: auto;   }
+    .question {height: 10%; color: white; margin: 0; padding: 0;}
+    .btn-frame {height: 10%; width: 100%; }
+    .btn-frame button {width: 100%; height: 100%;}
+    .quiz-wrapper {width: 100%; height: 100%;  display: flex; align-items: center; justify-content: center;}
+    .quiz-btn {width: 100%;}
+    #result-wrapper {height: 90%; width: 90%; margin-top: 10%;display: flex; align-items: center; justify-content: center;}
+    .result-slide { padding: 2.5% 5%; width: 100%;  background: white; background-image: url('https://media1.giphy.com/media/l1J9EQhfkb8tPu836/giphy.gif'); border: 3px solid gray; }
+    .result-img {max-width: 275px!important; height: auto; border: 2px solid purple;}
+    .result-btn {width: 100%; }
+    .result-btn a {text-decoration: none; color: white;}
+
+</style>
+
+<div class="quiz-wrapper">
+<div class="quiz-body"> 
+    <div id="glitter-text-wrapper">
+        <img id="glitter-text" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/sparkly-bling-quiz.gif" alt="Bling Quiz">
+    </div>
+    
+    <div class="result-slide-wrapper" id="result-wrapper" style="display: none;">
+        <div class="result-slide" id="powerpuff-result" style="display: none;">
+            <h1>POWERPUFF</h1>
+            <img class="result-img" src="https://images.squarespace-cdn.com/content/v1/5fd02eb8e589ab2987f35c47/1607652658046-YMO894GDXFBRAJITIGP4/ke17ZwdGBToddI8pDm48kLVq0S2Dbqszs7ujHc3Hcsl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmQPoRzxSr1hzN-vPBHt7YyN9jOzy65ZSt1zER_rrbhEDLlSANLGnH1nPVKjFvrdPB/Powerpuff%252B%252528multi%252529.jpg?format=2500w">
+            <p>Inspired by the dynamic trio, sprinkle some glitter in your life and channel your inner feminine energy with the most fun and colorful phone lanyard of them all, while fighting crime in the city of Townsville!</p>
+            <button class="result-btn styled-button magenta-btn"><a href="https://www.hangonbling.com/bling-shop/powerpuff" target="_blank">SHOP - $9.99</a></button>
+        </div>
+
+        <div class="result-slide" id="iwantcandy-result" style="display: none;">
+            <h1>I WANT CANDY</h1>
+            <img class="result-img" src="https://images.squarespace-cdn.com/content/v1/5fd02eb8e589ab2987f35c47/1607652669582-JGBD99CGY2UR1X02PXFD/ke17ZwdGBToddI8pDm48kODXExyE__604m5AuceJD3l7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmFk_H6M1tkD9NpL7mXac0oYYUhjNqzf7odEKyGjMGpGHMk8pfPN8-CWES2_Ych5y3/iwantcandy.jpg?format=2500w">
+            <p>The perfect two-in-one glasses chain for you - the candy lover!! </p>
+            <button class="result-btn styled-button magenta-btn"><a href="https://www.hangonbling.com/bling-shop/i-want-candy" target="_blank">SHOP - $9.99</a></button>
+        </div>
+
+        <div class="result-slide" id="foreveryoung-result" style="display: none;">
+            <h1>FOREVER YOUNG</h1>
+            <img class="result-img" src="https://images.squarespace-cdn.com/content/v1/5fd02eb8e589ab2987f35c47/1607652651105-3UT9TD5P387PQCEQUQVD/ke17ZwdGBToddI8pDm48kN2fPlPhRAt7nHFNsebnUIkUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKctQUEJf-fkUXyG_ed1M4efsXmFuzDREsJXxK6Btm6ScYW8mmUgdOy85STZ1iowWfr/Forever%252BYoung.jpg?format=2500w">
+            <p>Something to remind you to smile throughout the day. This phone lanyard is meant to boost your mood and help you let go of the negative energy. Using your phone should make you happy! Stay connected with the ones you love and with the child within you.</p>
+            <button class="result-btn styled-button magenta-btn"><a href="https://www.hangonbling.com/bling-shop/forever-young" target="_blank">SHOP - $9.99</a></button>
+        </div>
+
+        <div class="result-slide" id="millennial-result" style="display: none;">
+            <h1>MILLENNIAL</h1>
+            <img class="result-img" src="https://images.squarespace-cdn.com/content/v1/5fd02eb8e589ab2987f35c47/1607652678383-5ZBM3X78A8CPVAA3R96D/ke17ZwdGBToddI8pDm48kICV-KcXRiuLwBczd2E0gT17gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmdDC-KcNc9XgRiHYxHOb5FHvjOLQ2lukGDWVdbs9NuvPh1AVaHt2gyVmuUUNWj3MO/millenialgold.jpg?format=2500w">
+            <p>The perfect two-in-one glasses chain for you - the true Millennial!!</p>
+            <button class="result-btn styled-button magenta-btn"><a href="https://www.hangonbling.com/bling-shop/millennial" target="_blank">SHOP - $9.99</a></button>
+        </div>
+
+    </div>
+    
+    <div class="quiz-slides" id="zero">
+        <h2 class="question">Take this quiz to find out which lanyard or chain is your perfect fit! </h2>
+      <br>
+        <div style="width: 100%; height: 90%; display: flex; align-items: center; justify-content: center;">
+            <button class="quiz-btn styled-button lavender-inset-border lavender" id="begin-btn">START QUIZ</button>
+        </div>
+        
+        
+        
+    </div>
+    <div class="quiz-slides" id="one" style="display: none">
+        <h2 class="question">Favorite pop star:</h2>
+        <div class="left">
+            <div class="img-frame iwc fy"><img alt="britney spears" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q1a.jpg"></div>
+            <div class="btn-frame"><button class="quiz-btn iwc fy styled-button magenta-btn">BRITNEY</button></div>
+            
+        </div>
+        <div class="right">
+            <div class="img-frame pp m"><img alt="avril lavigne" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q1b.jpg"></div>
+            <div class="btn-frame"><button class="quiz-btn pp m styled-button magenta-btn">AVRIL</button></div>
+        </div>
+    </div>
+    <div class="quiz-slides" id="two" style="display: none">
+        <h2 class="question">Favorite Disney show:</h2>
+        <div class="left">
+            <div class="img-frame fy m"><img alt="lizzie mcquire show" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q2a.jpg"></div>
+            <div class="btn-frame"><button class="quiz-btn fy m styled-button magenta-btn">LIZZIE MCGUIRE</button></div>
+        </div>
+        <div class="right">
+            <div class="img-frame iwc pp"><img alt="even stevens show" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q2b.jpg"></div>
+            <div class="btn-frame"><button class="quiz-btn iwc pp styled-button magenta-btn">EVEN STEVENS</button></div>
+
+        </div>
+    </div>
+    <div class="quiz-slides" id="three" style="display: none">
+        <h2 class="question">Favorite Nickelodeon show:</h2>
+        <div class="left">
+            <div class="img-frame pp iwc"><img alt="rocket power show" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q3a.jpg"></div>
+            <div class="btn-frame"><button class="quiz-btn pp iwc styled-button magenta-btn">ROCKET POWER</button></div>
+        </div>
+        <div class="right">
+            <div class="img-frame fy m"><img alt="as told by ginger show" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q3b.jpg"></div>
+            <div class="btn-frame"><button class="quiz-btn fy m styled-button magenta-btn">AS TOLD BY GINGER</button></div>
+
+        </div>
+    </div>
+    <div class="quiz-slides" id="four" style="display: none">
+        <h2 class="question">Favorite Boy Band:</h2>
+        <div class="left">
+            <div class="img-frame pp m"><img alt="jonas brothers" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q4a.jpg"></div>
+            <div class="btn-frame"><button class="quiz-btn pp m styled-button magenta-btn">JONAS BROTHERS</button></div>
+        </div>
+        <div class="right">
+            <div class="img-frame iwc fy"><img alt="backstreet boys" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q4b.jpg"></div>
+            <div class="btn-frame"><button class="quiz-btn iwc fy styled-button magenta-btn">BACKSTREET BOYS</button></div>
+
+        </div>
+    </div>
+    <div class="quiz-slides" id="five" style="display: none">
+        <h2 class="question">Favorite Rom Com:</h2>
+        <div class="left">
+            <div class="img-frame pp iwc"><img alt="notting hill" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q5a.jpg"></div>
+            <div class="btn-frame"><button class="quiz-btn pp iwc styled-button magenta-btn">NOTTING HILL</button></div>
+        </div>
+        <div class="right">
+            <div class="img-frame fy m"><img alt="clueless" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q5b.jpg"></div>
+            <div class="btn-frame"><button class="quiz-btn fy m styled-button magenta-btn">CLUELESS</button></div>
+
+        </div>
+    </div>
+    <div class="quiz-slides" id="six" style="display: none">
+        <h2 class="question">Best Midriff:</h2>
+        <div class="third">
+            <div class="third-half">
+                <div class="img-frame m" style="height: 40%; width: auto;"><img alt="A" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q6a.jpg"></div>
+                <div class="btn-frame"><button class="quiz-btn m styled-button magenta-btn">A</button></div>
+            </div>
+            
+            <div class="third-half">
+                <div class="img-frame iwc" style="height: 40%; width: auto;"><img alt="D" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q6d.jpg"></div>
+                <div class="btn-frame"><button class="quiz-btn iwc styled-button magenta-btn">D</button></div>
+            </div>
+            
+
+
+        </div>
+        <div class="third">
+            <div class="third-half">
+                <div class="img-frame fy" style="height: 40%; width: auto;"><img alt="B" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q6b.jpg"></div>
+                <div class="btn-frame"><button class="quiz-btn fy styled-button magenta-btn">B</button></div>
+            </div>
+          
+            <div class="third-half">
+                <div class="img-frame pp" style="height: 40%; width: auto;"><img alt="E" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q6e.jpg"></div>
+                <div class="btn-frame"><button class="quiz-btn pp styled-button magenta-btn">E</button></div>
+            </div>
+            
+
+        </div>
+
+        <div class="third">
+            <div class="third-half">
+                <div class="img-frame m" style="height: 40%; width: auto;"><img alt="C" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q6c.jpg"></div>
+                <div class="btn-frame"><button class="quiz-btn m styled-button magenta-btn">C</button></div>
+            </div>
+         
+            <div class="third-half">
+                <div class="img-frame pp" style="height: 40%; width: auto;"><img alt="F" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q6f.jpg"></div>
+                <div class="btn-frame"><button class="quiz-btn pp styled-button magenta-btn">F</button></div>
+            </div>
+           
+
+
+        </div>
+    </div>
+    <div class="quiz-slides" id="seven" style="display: none">
+        <h2 class="question">Favorite Y2k Beauty Item:</h2>
+        <div class="left">
+            <div class="img-frame iwc pp"><img alt="lip smackers" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q7a.jpg "></div>
+            <div class="btn-frame"><button class="quiz-btn iwc pp styled-button magenta-btn">LIP SMACKERS</button></div>
+        </div>
+        <div class="right">
+            <div class="img-frame m fy"><img alt="roll on body glitter" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q7b.jpg"></div>
+            <div class="btn-frame"><button class="quiz-btn m fy styled-button magenta-btn">ROLL-ON BODY GLITTER</button></div>
+
+        </div>
+    </div>
+    <div class="quiz-slides" id="eight" style="display: none">
+        <h2 class="question">Favorite Candy:</h2>
+        <div class="left">
+            <div class="img-frame m fy"><img alt="Ring pop" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q8a.jpg"></div>
+            <div class="btn-frame"><button class="quiz-btn m fy styled-button magenta-btn">RING POP</button></div>
+        </div>
+        <div class="right">
+            <div class="img-frame iwc pp"><img alt="gushers" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q8b.jpg"></div>
+            <div class="btn-frame"><button class="quiz-btn iwc pp styled-button magenta-btn">GUSHERS</button></div>
+
+        </div>
+    </div>
+    <div class="quiz-slides" id="nine" style="display: none">
+        <h2 class="question">Favorite Hair Accessory:</h2>
+        <div class="left">
+            <div class="img-frame m pp"><img alt="SCHRUNCHIE" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q9a.jpg"></div>
+            <div class="btn-frame"><button class="quiz-btn m pp styled-button magenta-btn">SCRUNCHIE</button></div>
+        </div>
+        <div class="right">
+            <div class="img-frame iwc fy"><img alt="butterfly clips" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q9b.jpg"></div>
+            <div class="btn-frame"><button class="quiz-btn iwc fy styled-button magenta-btn">BUTTERFLY CLIPS</button></div>
+
+        </div>
+    </div>
+    <div class="quiz-slides" id="ten" style="display: none">
+        <h2 class="question">Favorite Denim Cut: </h2>
+        <div class="left">
+            <div class="img-frame m fy"><img alt="low rise" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q10a.jpg"></div>
+            <div class="btn-frame"><button class="quiz-btn m fy styled-button magenta-btn">LOW-RISE JEANS</button></div>
+        </div>
+        <div class="right">
+            <div class="img-frame iwc pp"><img alt="mini skirt" src="https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/q10b.jpg"></div>
+            <div class="btn-frame"><button class="quiz-btn iwc pp styled-button magenta-btn">MINI SKIRT</button></div>
+
+        </div>
+    </div>
+
+    
+    
+
+</div> 
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    var slideCounter = 0;
+    var theSlides = document.getElementsByClassName('quiz-slides');
+
+    var iWantCandy = 0; 
+    $('.iwc').on("click", function(){iWantCandy++;});
+
+    var foreverYoung = 0; 
+    $('.fy').on("click", function(){foreverYoung++;} );
+
+    var powerpuff = 0; 
+    $('.pp').on("click", function(){powerpuff++;});
+
+    var millennial = 0; 
+    $('.m').on("click", function(){millennial++;});
+
+
+
+    $('.quiz-btn').on("click", toggleSlides);
+    $('.img-frame').on("click", toggleSlides);
+
+    function toggleSlides(){
+        slideCounter++; 
+        if (slideCounter >= 11){
+            console.log("end");
+            document.getElementById("ten").style.display = "none"; 
+            document.getElementById("result-wrapper").style.display = "block";
+            calculateResult();
+        } else {
+            var activeSlide = theSlides[slideCounter];
+            var oldSlide = theSlides[slideCounter - 1];
+            oldSlide.style.display = "none";
+            activeSlide.style.display = "block";
+        }
+    }
+    
+
+    function calculateResult(){
+        $("#glitter-text").attr("src", "https://raw.githubusercontent.com/coloradical/HangOnBling-Repo/main/quiz/cropped%20quiz%20pics/your-result.gif")
+        
+        var mathMax = (Math.max(iWantCandy, foreverYoung, powerpuff, millennial));
+
+        if (iWantCandy === mathMax){$('#iwantcandy-result').css("display", "block")}
+        else if (foreverYoung === mathMax){$('#foreveryoung-result').css("display", "block")}
+        else if (millennial === mathMax) {$('#millennial-result').css("display", "block")}
+        else {$('#powerpuff-result').css("display", "block")}
+
+
+        console.log('RESULTS: powerpuff '+ powerpuff + ", forever young "+ foreverYoung + ", mill " + millennial + ", i want candy " + iWantCandy);
+    }
+
+
+</script>
+
+</html> 
+
